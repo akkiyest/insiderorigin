@@ -7,21 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8287B621DB6611400582291 /* PlayerControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8287B611DB6611400582291 /* PlayerControll.swift */; };
+		F830CF161DB4ED35002317FF /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F830CF151DB4ED35002317FF /* settingViewController.swift */; };
 		F89455DF1DA90338004F6D29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89455DE1DA90338004F6D29 /* AppDelegate.swift */; };
 		F89455E11DA90338004F6D29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89455E01DA90338004F6D29 /* ViewController.swift */; };
 		F89455E41DA90338004F6D29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F89455E21DA90338004F6D29 /* Main.storyboard */; };
 		F89455E61DA90338004F6D29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F89455E51DA90338004F6D29 /* Assets.xcassets */; };
-		F89455E91DA90338004F6D29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F89455E71DA90338004F6D29 /* LaunchScreen.storyboard */; };
+		F8F468411DB8A0D9006D3EB6 /* rulePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F468401DB8A0D9006D3EB6 /* rulePageViewController.swift */; };
+		F8F468451DB8A42C006D3EB6 /* rule0ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F468441DB8A42C006D3EB6 /* rule0ViewController.swift */; };
+		F8F468471DB8AF6B006D3EB6 /* rule1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F468461DB8AF6B006D3EB6 /* rule1ViewController.swift */; };
+		F8F468491DB8AF7D006D3EB6 /* rule2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F468481DB8AF7D006D3EB6 /* rule2ViewController.swift */; };
+		F8F4684B1DB8AFF1006D3EB6 /* rule3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F4684A1DB8AFF1006D3EB6 /* rule3ViewController.swift */; };
+		F8F4684D1DB8AFFB006D3EB6 /* rule4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F4684C1DB8AFFB006D3EB6 /* rule4ViewController.swift */; };
+		F8F4684F1DB8B003006D3EB6 /* rule5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F4684E1DB8B003006D3EB6 /* rule5ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F8287B611DB6611400582291 /* PlayerControll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerControll.swift; path = ../PlayerControll.swift; sourceTree = "<group>"; };
+		F830CF151DB4ED35002317FF /* settingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingViewController.swift; sourceTree = "<group>"; };
 		F89455DB1DA90338004F6D29 /* InsiderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InsiderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F89455DE1DA90338004F6D29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F89455E01DA90338004F6D29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F89455E31DA90338004F6D29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F89455E51DA90338004F6D29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F89455E81DA90338004F6D29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F89455EA1DA90338004F6D29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8F468401DB8A0D9006D3EB6 /* rulePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rulePageViewController.swift; sourceTree = "<group>"; };
+		F8F468441DB8A42C006D3EB6 /* rule0ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rule0ViewController.swift; sourceTree = "<group>"; };
+		F8F468461DB8AF6B006D3EB6 /* rule1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = rule1ViewController.swift; path = ../rule1ViewController.swift; sourceTree = "<group>"; };
+		F8F468481DB8AF7D006D3EB6 /* rule2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rule2ViewController.swift; sourceTree = "<group>"; };
+		F8F4684A1DB8AFF1006D3EB6 /* rule3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rule3ViewController.swift; sourceTree = "<group>"; };
+		F8F4684C1DB8AFFB006D3EB6 /* rule4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rule4ViewController.swift; sourceTree = "<group>"; };
+		F8F4684E1DB8B003006D3EB6 /* rule5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rule5ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +70,20 @@
 		F89455DD1DA90338004F6D29 /* InsiderApp */ = {
 			isa = PBXGroup;
 			children = (
+				F8F468461DB8AF6B006D3EB6 /* rule1ViewController.swift */,
+				F8F4684A1DB8AFF1006D3EB6 /* rule3ViewController.swift */,
+				F8F4684C1DB8AFFB006D3EB6 /* rule4ViewController.swift */,
+				F8F4684E1DB8B003006D3EB6 /* rule5ViewController.swift */,
 				F89455DE1DA90338004F6D29 /* AppDelegate.swift */,
 				F89455E01DA90338004F6D29 /* ViewController.swift */,
+				F8287B611DB6611400582291 /* PlayerControll.swift */,
 				F89455E21DA90338004F6D29 /* Main.storyboard */,
+				F8F468441DB8A42C006D3EB6 /* rule0ViewController.swift */,
+				F8F468401DB8A0D9006D3EB6 /* rulePageViewController.swift */,
+				F830CF151DB4ED35002317FF /* settingViewController.swift */,
 				F89455E51DA90338004F6D29 /* Assets.xcassets */,
-				F89455E71DA90338004F6D29 /* LaunchScreen.storyboard */,
 				F89455EA1DA90338004F6D29 /* Info.plist */,
+				F8F468481DB8AF7D006D3EB6 /* rule2ViewController.swift */,
 			);
 			path = InsiderApp;
 			sourceTree = "<group>";
@@ -91,12 +115,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = akihiro.itoh;
 				TargetAttributes = {
 					F89455DA1DA90338004F6D29 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = TWVPKMPB47;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -123,7 +148,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F89455E91DA90338004F6D29 /* LaunchScreen.storyboard in Resources */,
 				F89455E61DA90338004F6D29 /* Assets.xcassets in Resources */,
 				F89455E41DA90338004F6D29 /* Main.storyboard in Resources */,
 			);
@@ -137,7 +161,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F89455E11DA90338004F6D29 /* ViewController.swift in Sources */,
+				F8F4684D1DB8AFFB006D3EB6 /* rule4ViewController.swift in Sources */,
+				F8F468411DB8A0D9006D3EB6 /* rulePageViewController.swift in Sources */,
+				F8287B621DB6611400582291 /* PlayerControll.swift in Sources */,
+				F8F468451DB8A42C006D3EB6 /* rule0ViewController.swift in Sources */,
+				F8F4684B1DB8AFF1006D3EB6 /* rule3ViewController.swift in Sources */,
+				F8F468471DB8AF6B006D3EB6 /* rule1ViewController.swift in Sources */,
+				F8F468491DB8AF7D006D3EB6 /* rule2ViewController.swift in Sources */,
 				F89455DF1DA90338004F6D29 /* AppDelegate.swift in Sources */,
+				F830CF161DB4ED35002317FF /* settingViewController.swift in Sources */,
+				F8F4684F1DB8B003006D3EB6 /* rule5ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,14 +183,6 @@
 				F89455E31DA90338004F6D29 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F89455E71DA90338004F6D29 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F89455E81DA90338004F6D29 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -177,8 +202,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -222,8 +249,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -242,6 +271,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -251,9 +281,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InsiderApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.akihiro.itoh.InsiderApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -262,9 +294,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InsiderApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.akihiro.itoh.InsiderApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -287,6 +321,7 @@
 				F89455EF1DA90338004F6D29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F89455DA1DA90338004F6D29"
-               BuildableName = "InsiderApp.app"
-               BlueprintName = "InsiderApp"
-               ReferencedContainer = "container:InsiderApp.xcodeproj">
+               BlueprintIdentifier = "F8F468281DB78D40006D3EB6"
+               BuildableName = "test.app"
+               BlueprintName = "test"
+               ReferencedContainer = "container:test.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F89455DA1DA90338004F6D29"
-            BuildableName = "InsiderApp.app"
-            BlueprintName = "InsiderApp"
-            ReferencedContainer = "container:InsiderApp.xcodeproj">
+            BlueprintIdentifier = "F8F468281DB78D40006D3EB6"
+            BuildableName = "test.app"
+            BlueprintName = "test"
+            ReferencedContainer = "container:test.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F89455DA1DA90338004F6D29"
-            BuildableName = "InsiderApp.app"
-            BlueprintName = "InsiderApp"
-            ReferencedContainer = "container:InsiderApp.xcodeproj">
+            BlueprintIdentifier = "F8F468281DB78D40006D3EB6"
+            BuildableName = "test.app"
+            BlueprintName = "test"
+            ReferencedContainer = "container:test.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F89455DA1DA90338004F6D29"
-            BuildableName = "InsiderApp.app"
-            BlueprintName = "InsiderApp"
-            ReferencedContainer = "container:InsiderApp.xcodeproj">
+            BlueprintIdentifier = "F8F468281DB78D40006D3EB6"
+            BuildableName = "test.app"
+            BlueprintName = "test"
+            ReferencedContainer = "container:test.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
