@@ -42,6 +42,7 @@ extension rulePageViewController : UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerBefore viewControllerBeforeViewController: UIViewController) -> UIViewController? {
+        
         if rulePageViewController.isKind(of: rule0ViewController.self) {
             return getSecond()
         } else if rulePageViewController.isKind(of: rule2ViewController.self) {
@@ -55,10 +56,10 @@ extension rulePageViewController : UIPageViewControllerDataSource {
         } else {
             return nil
         }
+        return nil
     }
-}
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         return nil
     }
 }
-
