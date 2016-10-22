@@ -27,7 +27,7 @@ class PlayerControll: UIResponder, UIApplicationDelegate {
         //出題者の数は入れないので-１する
         PlayerNum -= 1
     }
-    //外部から数字を取りたい場合にこのクラスから取得する
+    //外部から数字を取りたい場合にこのメソッドから取得する
     func getPlayer() -> Int{
         return PlayerNum
     }

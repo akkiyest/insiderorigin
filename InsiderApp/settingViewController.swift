@@ -81,6 +81,58 @@ class settingViewController: UIViewController {
         spymodeswitch.setOn(false, animated: false)
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func startButton(_ sender: AnyObject) {
+        var sendPLN = playerNumberTextField.text
+        var sendKEYtime = KeywordTime.text
+        var sendINStime = InsiderTime.text
+        
+        //プレイヤー人数とキーワード推理時間とインサイダー推理時間が空欄でないかチェックする
+        if sendPLN == ""{
+            let alert2: UIAlertController = UIAlertController(title: "プレイヤー数が不正です", message: "４〜１０を選択してください",preferredStyle:  UIAlertControllerStyle.alert)
+            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
+                (action: UIAlertAction!) -> Void in
+                print("OK")
+            })
+            alert2.addAction(defaultAction)
+            present(alert2, animated: true, completion: nil)
+        } else {
+            return
+        }
+        
+        var msg:String = ""
+        var msg2:String = ""
+        
+        if advancedswitch.isOn {
+        msg = "アドバンスドモードON\n"
+        //探偵モード、ダウトモード、スパイモードのフラグをすべて1にする（未記入）
+        } else if advancedswitch.isOn == false && detectiveswitch.isOn || noonedoubtsswitch.isOn || hanseikaiswitch.isOn {
+            msg = "個別設定ON\n"
+        }
+
+        
+        if spymodeswitch.isOn{
+            msg2 = "スパイ有り\n"
+        }
+        
+        print(msg.self)
+        print(msg2.self)
+        
+        
+
+        //インスタンスを実装
+        let HQ = PlayerControll()
+        //プレイヤー人数（マスター含む）をnumで持つ
+        let num:Int? = Int(playerNumberTextField.text!)
+        HQ.setPlayer(num: num)
+        //プレイヤー人数（マスターを抜く）を取得しランダムナンバーの配列を得ておく
+        let playernum = HQ.getPlayer()
+        let PASSz = HQ.pickNum(num: playernum)
+        
+        
+        
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -93,5 +145,7 @@ class settingViewController: UIViewController {
         KeywordTime.resignFirstResponder()
         InsiderTime.resignFirstResponder()
     }
+    
+    
     
 }

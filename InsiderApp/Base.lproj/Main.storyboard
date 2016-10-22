@@ -116,13 +116,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FQ-sM-1fV">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="odw-E4-9JS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="インサイダーオリジンズとは？"/>
+                                <state key="normal" title="ルール"/>
                                 <connections>
-                                    <segue destination="c4z-sM-eFa" kind="show" id="W10-pP-xb5"/>
+                                    <segue destination="c4z-sM-eFa" kind="show" id="Hs4-1t-VS8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUm-iA-ktV">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="gUf-ec-5yN"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="全プレイヤー人数(4-10)">
                                         <attributes>
@@ -135,20 +141,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ham-ba-jvt">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="o4l-vQ-9ze"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="キーワード推理時間">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="19" name=".HiraKakuInterface-W3"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylM-ez-yz5">
-                                <attributedString key="attributedText">
-                                    <fragment content="インサイダー推理時間">
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="19" name=".HiraKakuInterface-W3"/>
@@ -312,8 +309,7 @@
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Yj6-2q-YnK">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="DQZ-KG-U4A"/>
-                                    <constraint firstAttribute="height" constant="30" id="lGp-E0-SEH"/>
+                                    <constraint firstAttribute="width" constant="70" id="XMf-nu-Umz"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -324,8 +320,8 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="QCV-ev-kEp">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="BBJ-zx-yuB"/>
                                     <constraint firstAttribute="height" constant="30" id="KTs-9w-A5c"/>
+                                    <constraint firstAttribute="width" constant="70" id="YFu-bg-Cl4"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -333,85 +329,125 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="y0H-w8-C2i">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="2MS-cs-5wv"/>
+                                    <constraint firstAttribute="width" constant="70" id="H4Q-68-m3J"/>
                                     <constraint firstAttribute="height" constant="30" id="lk5-Sz-ULN"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sgs-jf-Iz7">
-                                <frame key="frameInset" minX="307" minY="335" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sgs-jf-Iz7">
+                                <frame key="frameInset" minX="309" minY="320.5" width="52" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dhN-Rj-JIy"/>
+                                    <constraint firstAttribute="width" constant="50" id="u5D-5V-IkM"/>
+                                </constraints>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hun-yg-4e6">
-                                <frame key="frameInset" minX="307" minY="372" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hun-yg-4e6">
+                                <frame key="frameInset" minX="309" minY="357.5" width="52" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="5JQ-iY-zJn"/>
+                                    <constraint firstAttribute="height" constant="30" id="97v-0R-HWy"/>
+                                </constraints>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d1Q-Ps-c5I">
-                                <frame key="frameInset" minX="307" minY="408" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d1Q-Ps-c5I">
+                                <frame key="frameInset" minX="309" minY="393.5" width="52" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="M37-P1-yOQ"/>
+                                    <constraint firstAttribute="width" constant="50" id="iXY-P9-wC9"/>
+                                </constraints>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ywr-lf-aOF">
-                                <frame key="frameInset" minX="307" minY="486" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ywr-lf-aOF">
+                                <frame key="frameInset" minX="309" minY="472" width="52" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="PD2-Hc-2CP"/>
+                                    <constraint firstAttribute="height" constant="30" id="vQN-hh-dd2"/>
+                                </constraints>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly5-In-MTx">
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="プレイ開始"/>
+                                <connections>
+                                    <action selector="startButton:" destination="w0i-xx-II1" eventType="touchUpInside" id="3t0-3F-2W7"/>
+                                </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FWo-Me-ghb">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Ev1-j8-bk0"/>
-                                    <constraint firstAttribute="width" constant="50" id="ayS-wQ-fV7"/>
-                                </constraints>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FWo-Me-ghb">
+                                <frame key="frameInset" minX="289" minY="284" width="72" height="31"/>
                                 <connections>
                                     <action selector="advancedSwitched:" destination="w0i-xx-II1" eventType="valueChanged" id="vT8-cT-ePz"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylM-ez-yz5">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="pkS-Xt-bbf"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="インサイダー推理時間">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="19" name=".HiraKakuInterface-W3"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="sgs-jf-Iz7" firstAttribute="centerY" secondItem="JVu-PY-LU8" secondAttribute="centerY" id="1Dw-5Q-4li"/>
                             <constraint firstItem="DZv-4x-U5e" firstAttribute="leading" secondItem="HI6-CI-Yxe" secondAttribute="leadingMargin" constant="30" id="4ji-p7-4p2"/>
+                            <constraint firstItem="hun-yg-4e6" firstAttribute="centerY" secondItem="DZv-4x-U5e" secondAttribute="centerY" id="7RT-9v-2yn"/>
                             <constraint firstAttribute="trailing" secondItem="0VH-e9-WXI" secondAttribute="trailing" id="7Vv-1M-6Vp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ly5-In-MTx" secondAttribute="trailing" id="81e-eC-KsY"/>
                             <constraint firstItem="QCV-ev-kEp" firstAttribute="leading" secondItem="Yj6-2q-YnK" secondAttribute="leading" id="8aN-vS-kRF"/>
                             <constraint firstItem="0VH-e9-WXI" firstAttribute="leading" secondItem="HI6-CI-Yxe" secondAttribute="leading" id="8j5-2m-jtM"/>
                             <constraint firstItem="BmN-Y3-KLw" firstAttribute="leading" secondItem="HI6-CI-Yxe" secondAttribute="leadingMargin" constant="30" id="95U-Ma-W8b"/>
-                            <constraint firstItem="Yj6-2q-YnK" firstAttribute="leading" secondItem="ZUm-iA-ktV" secondAttribute="trailing" constant="30" id="CMr-WD-xe7"/>
+                            <constraint firstItem="QCV-ev-kEp" firstAttribute="trailing" secondItem="HI6-CI-Yxe" secondAttribute="trailingMargin" id="Doh-vM-apu"/>
+                            <constraint firstItem="d1Q-Ps-c5I" firstAttribute="centerY" secondItem="BmN-Y3-KLw" secondAttribute="centerY" id="Dx3-wA-Eda"/>
+                            <constraint firstItem="y0H-w8-C2i" firstAttribute="trailing" secondItem="HI6-CI-Yxe" secondAttribute="trailingMargin" id="E8F-PR-YmG"/>
                             <constraint firstItem="ham-ba-jvt" firstAttribute="top" secondItem="ZUm-iA-ktV" secondAttribute="bottom" constant="20" id="E8G-ED-EQy"/>
+                            <constraint firstItem="ywr-lf-aOF" firstAttribute="centerY" secondItem="N2N-PY-FNT" secondAttribute="centerY" id="EHs-1E-Uva"/>
                             <constraint firstItem="P2o-XQ-92G" firstAttribute="top" secondItem="f92-ZZ-bh5" secondAttribute="bottom" constant="20" id="Er6-UQ-5c8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FWo-Me-ghb" secondAttribute="trailing" id="Gd4-w7-rdt"/>
                             <constraint firstItem="f92-ZZ-bh5" firstAttribute="leading" secondItem="HI6-CI-Yxe" secondAttribute="leading" constant="50" id="HRF-hD-HVi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sgs-jf-Iz7" secondAttribute="trailing" id="JN7-cT-NiP"/>
                             <constraint firstItem="N2N-PY-FNT" firstAttribute="top" secondItem="UNW-dd-2QS" secondAttribute="bottom" constant="10" id="KPM-YA-U6M"/>
                             <constraint firstItem="BmN-Y3-KLw" firstAttribute="top" secondItem="DZv-4x-U5e" secondAttribute="bottom" constant="20" id="KiA-8C-uG8"/>
                             <constraint firstItem="Ly5-In-MTx" firstAttribute="top" secondItem="8FQ-sM-1fV" secondAttribute="bottom" constant="30" id="Kn8-f5-GlX"/>
                             <constraint firstItem="UNW-dd-2QS" firstAttribute="leading" secondItem="HI6-CI-Yxe" secondAttribute="leadingMargin" constant="30" id="McE-f9-AfP"/>
                             <constraint firstItem="0VH-e9-WXI" firstAttribute="top" secondItem="HI6-CI-Yxe" secondAttribute="top" id="RCk-g3-1Ju"/>
-                            <constraint firstItem="ZUm-iA-ktV" firstAttribute="top" secondItem="0VH-e9-WXI" secondAttribute="bottom" constant="30" id="RoD-wD-JZK"/>
+                            <constraint firstItem="ZUm-iA-ktV" firstAttribute="top" secondItem="0VH-e9-WXI" secondAttribute="bottom" constant="15" id="RoD-wD-JZK"/>
                             <constraint firstItem="JVu-PY-LU8" firstAttribute="leading" secondItem="HI6-CI-Yxe" secondAttribute="leadingMargin" constant="30" id="Sae-35-WZ6"/>
+                            <constraint firstItem="mSY-kL-pjT" firstAttribute="top" secondItem="Ly5-In-MTx" secondAttribute="bottom" constant="30" id="UPj-IE-eOo"/>
                             <constraint firstItem="f92-ZZ-bh5" firstAttribute="trailing" secondItem="HI6-CI-Yxe" secondAttribute="trailingMargin" id="Ub5-Oo-PuY"/>
                             <constraint firstItem="8FQ-sM-1fV" firstAttribute="top" secondItem="N2N-PY-FNT" secondAttribute="bottom" constant="20" id="VGj-Sl-lTT"/>
+                            <constraint firstItem="Yj6-2q-YnK" firstAttribute="trailing" secondItem="HI6-CI-Yxe" secondAttribute="trailingMargin" id="WEm-c0-T5V"/>
                             <constraint firstItem="FWo-Me-ghb" firstAttribute="leading" secondItem="y0H-w8-C2i" secondAttribute="leading" id="WwF-DY-eVf"/>
                             <constraint firstItem="y0H-w8-C2i" firstAttribute="centerY" secondItem="ylM-ez-yz5" secondAttribute="centerY" id="YeC-oX-1p2"/>
                             <constraint firstItem="Yj6-2q-YnK" firstAttribute="centerY" secondItem="ZUm-iA-ktV" secondAttribute="centerY" id="a1f-0C-f9M"/>
                             <constraint firstItem="Ly5-In-MTx" firstAttribute="leading" secondItem="HI6-CI-Yxe" secondAttribute="leadingMargin" id="aJC-eQ-3E5"/>
                             <constraint firstItem="Ly5-In-MTx" firstAttribute="centerX" secondItem="HI6-CI-Yxe" secondAttribute="centerX" id="bKt-YX-v69"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ywr-lf-aOF" secondAttribute="trailing" id="cAv-o6-QY8"/>
                             <constraint firstItem="UNW-dd-2QS" firstAttribute="top" secondItem="BmN-Y3-KLw" secondAttribute="bottom" constant="20" id="cdm-Ll-Nh6"/>
                             <constraint firstItem="ylM-ez-yz5" firstAttribute="top" secondItem="ham-ba-jvt" secondAttribute="bottom" constant="20" id="cl7-bu-k8L"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="UNW-dd-2QS" secondAttribute="trailing" constant="3" id="dFR-RN-g2h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UNW-dd-2QS" secondAttribute="trailing" id="dFR-RN-g2h"/>
                             <constraint firstItem="FWo-Me-ghb" firstAttribute="centerY" secondItem="P2o-XQ-92G" secondAttribute="centerY" id="eYT-hQ-UKH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UNW-dd-2QS" secondAttribute="trailing" id="edp-V2-gzp"/>
                             <constraint firstItem="8FQ-sM-1fV" firstAttribute="centerX" secondItem="HI6-CI-Yxe" secondAttribute="centerX" id="f7H-ts-SmR"/>
                             <constraint firstItem="y0H-w8-C2i" firstAttribute="leading" secondItem="QCV-ev-kEp" secondAttribute="leading" id="hah-jR-HFe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8FQ-sM-1fV" secondAttribute="trailing" id="k88-q1-FDd"/>
                             <constraint firstItem="JVu-PY-LU8" firstAttribute="top" secondItem="P2o-XQ-92G" secondAttribute="bottom" constant="20" id="kCW-w2-qsp"/>
-                            <constraint firstItem="ham-ba-jvt" firstAttribute="leading" secondItem="HI6-CI-Yxe" secondAttribute="leadingMargin" constant="25" id="ksl-QI-0wo"/>
+                            <constraint firstItem="ham-ba-jvt" firstAttribute="leading" secondItem="HI6-CI-Yxe" secondAttribute="leadingMargin" id="ksl-QI-0wo"/>
                             <constraint firstItem="N2N-PY-FNT" firstAttribute="leading" secondItem="HI6-CI-Yxe" secondAttribute="leadingMargin" constant="30" id="oup-hD-WXx"/>
                             <constraint firstItem="DZv-4x-U5e" firstAttribute="top" secondItem="JVu-PY-LU8" secondAttribute="bottom" constant="20" id="p0P-5G-RZ2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hun-yg-4e6" secondAttribute="trailing" id="ply-kg-vWX"/>
                             <constraint firstItem="f92-ZZ-bh5" firstAttribute="top" secondItem="ylM-ez-yz5" secondAttribute="bottom" constant="30" id="qyu-lR-wZ9"/>
-                            <constraint firstItem="ylM-ez-yz5" firstAttribute="leading" secondItem="HI6-CI-Yxe" secondAttribute="leadingMargin" constant="25" id="sAY-RO-vRT"/>
-                            <constraint firstItem="ZUm-iA-ktV" firstAttribute="leading" secondItem="HI6-CI-Yxe" secondAttribute="leadingMargin" constant="25" id="u1x-hx-you"/>
+                            <constraint firstItem="ylM-ez-yz5" firstAttribute="leading" secondItem="HI6-CI-Yxe" secondAttribute="leadingMargin" id="sAY-RO-vRT"/>
+                            <constraint firstItem="ZUm-iA-ktV" firstAttribute="leading" secondItem="HI6-CI-Yxe" secondAttribute="leadingMargin" id="u1x-hx-you"/>
                             <constraint firstItem="QCV-ev-kEp" firstAttribute="centerY" secondItem="ham-ba-jvt" secondAttribute="centerY" id="ubc-io-JfD"/>
                             <constraint firstItem="P2o-XQ-92G" firstAttribute="leading" secondItem="HI6-CI-Yxe" secondAttribute="leadingMargin" constant="30" id="wCP-Qu-nMO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="d1Q-Ps-c5I" secondAttribute="trailing" id="zjm-UD-uIU"/>
                         </constraints>
                     </view>
                     <connections>
@@ -593,7 +629,7 @@ Published by Oink Games</string>
                                     </fragment>
                                     <fragment>
                                         <string key="content">、
-クイズの謎を解きましょう。
+キーワードを当てましょう。
 </string>
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -661,13 +697,20 @@ Cg
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doG-Rs-PRM">
                                 <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">実は、そのクイズの参加者の中に、
-そのクイズを作った</string>
+                                    <fragment content="実は、そのクイズの参加者の中に、">
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
                                             <font key="NSOriginalFont" size="16" name="HiraginoSans-W4"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+キーワードを設定した</string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="16" name="HiraginoSans-W4"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -727,8 +770,26 @@ Cg
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKw-2D-Rgg">
                                 <attributedString key="attributedText">
+                                    <fragment content="全員で話し合いながら、">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="16" name="HiraginoSans-W4"/>
+                                            <font key="NSOriginalFont" size="14" name="HiraginoSans-W4"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
                                     <fragment>
-                                        <string key="content">全員で話し合いながら、インサイダー容疑者を
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="14" name="HiraginoSans-W4"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">インサイダー容疑者を
 多数決で決定します。
 インサイダーを見つけなければ、
 </string>
@@ -812,10 +873,13 @@ Cg
                                 <color key="shadowColor" red="1" green="0.23921568630000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="p6T-Qo-Vly">
-                                <frame key="frameInset" minX="168" minY="630" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="p6T-Qo-Vly"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXm-bk-E6P">
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="BackButton:" destination="xah-gf-sIC" eventType="touchUpInside" id="YwH-3r-ova"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -827,6 +891,7 @@ Cg
                             <constraint firstAttribute="trailingMargin" secondItem="VpG-lj-GZW" secondAttribute="trailing" id="8AN-JZ-LCo"/>
                             <constraint firstItem="eLW-pC-GaI" firstAttribute="top" secondItem="oMR-H0-boq" secondAttribute="bottom" constant="30" id="8Xk-kP-mlr"/>
                             <constraint firstItem="eLW-pC-GaI" firstAttribute="centerX" secondItem="RAN-0h-Erh" secondAttribute="centerX" id="9mP-wQ-Bw4"/>
+                            <constraint firstItem="4TE-hR-iMn" firstAttribute="top" secondItem="sXm-bk-E6P" secondAttribute="bottom" id="9uM-9X-oNd"/>
                             <constraint firstItem="doG-Rs-PRM" firstAttribute="leading" secondItem="RAN-0h-Erh" secondAttribute="leadingMargin" id="DCK-L7-N0v"/>
                             <constraint firstItem="WKw-2D-Rgg" firstAttribute="leading" secondItem="RAN-0h-Erh" secondAttribute="leadingMargin" id="E4e-yj-GtV"/>
                             <constraint firstItem="WKw-2D-Rgg" firstAttribute="centerX" secondItem="RAN-0h-Erh" secondAttribute="centerX" id="FJV-lq-Req"/>
@@ -834,6 +899,7 @@ Cg
                             <constraint firstItem="jWJ-YQ-zz7" firstAttribute="top" secondItem="VpG-lj-GZW" secondAttribute="bottom" constant="10" id="N48-FB-Fc5"/>
                             <constraint firstItem="IXb-Kl-bZF" firstAttribute="top" secondItem="Ub1-Um-g9O" secondAttribute="bottom" constant="30" id="OuB-LQ-WLa"/>
                             <constraint firstItem="Ub1-Um-g9O" firstAttribute="top" secondItem="eLW-pC-GaI" secondAttribute="bottom" constant="30" id="RGR-d8-ebe"/>
+                            <constraint firstItem="sXm-bk-E6P" firstAttribute="leading" secondItem="RAN-0h-Erh" secondAttribute="leadingMargin" id="SoH-MP-wDd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="doG-Rs-PRM" secondAttribute="trailing" id="UkX-Zv-Rqr"/>
                             <constraint firstItem="doG-Rs-PRM" firstAttribute="top" secondItem="tM7-Wv-1Lo" secondAttribute="bottom" constant="10" id="VQ6-mc-6Td"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WKw-2D-Rgg" secondAttribute="trailing" id="Vws-73-aDq"/>
@@ -843,9 +909,11 @@ Cg
                             <constraint firstItem="IXb-Kl-bZF" firstAttribute="centerX" secondItem="RAN-0h-Erh" secondAttribute="centerX" id="bUe-x8-Ge5"/>
                             <constraint firstItem="Ub1-Um-g9O" firstAttribute="leading" secondItem="RAN-0h-Erh" secondAttribute="leadingMargin" id="eJY-Nr-tsQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NGC-g5-aER" secondAttribute="trailing" id="em2-hN-bbv"/>
+                            <constraint firstItem="4TE-hR-iMn" firstAttribute="top" secondItem="p6T-Qo-Vly" secondAttribute="bottom" id="fd9-GG-HFS"/>
                             <constraint firstItem="VpG-lj-GZW" firstAttribute="centerX" secondItem="RAN-0h-Erh" secondAttribute="centerX" id="h1T-9c-ndX"/>
                             <constraint firstItem="NGC-g5-aER" firstAttribute="centerX" secondItem="RAN-0h-Erh" secondAttribute="centerX" id="hQ6-h9-eZI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tM7-Wv-1Lo" secondAttribute="trailing" id="inT-yE-1nq"/>
+                            <constraint firstItem="p6T-Qo-Vly" firstAttribute="centerX" secondItem="RAN-0h-Erh" secondAttribute="centerX" id="jsj-ei-EQd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eLW-pC-GaI" secondAttribute="trailing" id="kYd-5J-0OK"/>
                             <constraint firstItem="tM7-Wv-1Lo" firstAttribute="top" secondItem="NGC-g5-aER" secondAttribute="bottom" constant="10" id="l3N-e9-LLv"/>
                             <constraint firstItem="jWJ-YQ-zz7" firstAttribute="centerX" secondItem="RAN-0h-Erh" secondAttribute="centerX" id="m8d-ev-EVq"/>
@@ -865,7 +933,7 @@ Cg
         <!--Rule Page View Controller-->
         <scene sceneID="L3O-wL-Ken">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="c4z-sM-eFa" customClass="rulePageViewController" customModule="InsiderApp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="6" navigationOrientation="horizontal" spineLocation="none" id="c4z-sM-eFa" customClass="rulePageViewController" customModule="InsiderApp" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCq-hK-qvb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="241" y="1719"/>
@@ -873,7 +941,7 @@ Cg
         <!--Rule1 View Controller-->
         <scene sceneID="8VY-Oj-yv0">
             <objects>
-                <viewController storyboardIdentifier="rule1ViewController" id="AvY-b1-Kw3" customClass="rule1ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rule1ViewController" id="AvY-b1-Kw3" customClass="rule1ViewController" customModule="InsiderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c7q-hc-Uhe"/>
                         <viewControllerLayoutGuide type="bottom" id="KJm-0U-j0N"/>
@@ -882,41 +950,6 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="遊び方" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekh-7h-SGw">
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y37-Ku-mdX">
-                                <attributedString key="attributedText">
-                                    <fragment content="プレイ人数：4〜">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="18" name="HiraginoSans-W4"/>
-                                            <font key="NSOriginalFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">１０
-</string>
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="18" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="所要時間：～１５分">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="18" name="HiraginoSans-W4"/>
-                                            <font key="NSOriginalFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEc-My-AGp">
                                 <frame key="frameInset" minX="128" minY="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -926,12 +959,13 @@ Cg
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9f-ir-bQY">
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">１．じゃんけんなどで出題者役を決めます。
+                                        <string key="content">1
+じゃんけんなどで出題者役を決めます。
 　　このとき、名前を入力します。</string>
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -940,14 +974,23 @@ Cg
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOi-Q9-Mu4">
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">２．アプリの指示に従い、
-　　時計回りに端末を回しながら、
-　　</string>
+                                        <string key="content">2
+</string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="16" name="HiraginoSans-W4"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">アプリの指示に従い、
+時計回りに端末を回しながら、
+</string>
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
                                             <font key="NSOriginalFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="名前">
@@ -955,7 +998,7 @@ Cg
                                             <color key="NSColor" red="1" green="0.24500868055555555" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
                                             <font key="NSOriginalFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="と">
@@ -963,7 +1006,7 @@ Cg
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
                                             <font key="NSOriginalFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="キーワード">
@@ -971,18 +1014,18 @@ Cg
                                             <color key="NSColor" red="1" green="0.24462890625" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
                                             <font key="NSOriginalFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
                                         <string key="content">を全員入力します。
-　　また、このときに表示された
-　　</string>
+また、このときに表示された
+</string>
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
                                             <font key="NSOriginalFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="パスコード">
@@ -990,7 +1033,7 @@ Cg
                                             <color key="NSColor" red="0.24313725490196078" green="1" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
                                             <font key="NSOriginalFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="も覚えておいてください。">
@@ -998,7 +1041,7 @@ Cg
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
                                             <font key="NSOriginalFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -1006,14 +1049,32 @@ Cg
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qn-W1-fig">
                                 <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">３．出題者は答えのキーワードを黙読します。
-　　次に、</string>
+                                    <fragment content="３">
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
                                             <font key="NSOriginalFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="16" name="HiraginoSans-W4"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">出題者は答えのキーワードを黙読します。
+次に、</string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="16" name="HiraginoSans-W4"/>
+                                            <font key="NSOriginalFont" size="16" name="HiraginoSans-W4"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="パスコード">
@@ -1021,17 +1082,17 @@ Cg
                                             <color key="NSColor" red="0.24313725490196078" green="1" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
                                             <font key="NSOriginalFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
                                         <string key="content">を読み上げます。
-　　自分の</string>
+自分の</string>
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
                                             <font key="NSOriginalFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="パスコード">
@@ -1039,17 +1100,17 @@ Cg
                                             <color key="NSColor" red="0.24313725490196078" green="1" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
                                             <font key="NSOriginalFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
                                         <string key="content">を読み上げられた人が
-　　今回のゲームの</string>
+今回のゲームの</string>
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
                                             <font key="NSOriginalFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="インサイダー">
@@ -1057,7 +1118,7 @@ Cg
                                             <color key="NSColor" red="1" green="0.24313725490196078" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
                                             <font key="NSOriginalFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="です。">
@@ -1065,7 +1126,7 @@ Cg
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
                                             <font key="NSOriginalFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -1076,40 +1137,33 @@ Cg
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jlw-kb-BV2"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VC2-cK-oyp">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="WWM-gC-PoX"/>
                                     <constraint firstAttribute="height" constant="150" id="s1y-Wm-n4x"/>
                                 </constraints>
                             </imageView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jlw-kb-BV2">
-                                <frame key="frameInset" minX="168" minY="622" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="iOi-Q9-Mu4" firstAttribute="top" secondItem="Y9f-ir-bQY" secondAttribute="bottom" id="6aW-uP-b9k"/>
+                            <constraint firstItem="KJm-0U-j0N" firstAttribute="top" secondItem="Jlw-kb-BV2" secondAttribute="bottom" id="5L6-yw-IV3"/>
                             <constraint firstItem="Y9f-ir-bQY" firstAttribute="leading" secondItem="TCt-RD-pYM" secondAttribute="leadingMargin" id="918-jt-ej4"/>
                             <constraint firstItem="iOi-Q9-Mu4" firstAttribute="leading" secondItem="TCt-RD-pYM" secondAttribute="leadingMargin" id="Ano-KX-UdP"/>
                             <constraint firstItem="oM7-jA-uvd" firstAttribute="centerX" secondItem="TCt-RD-pYM" secondAttribute="centerX" id="DBd-PR-xVR"/>
+                            <constraint firstItem="VC2-cK-oyp" firstAttribute="top" secondItem="c7q-hc-Uhe" secondAttribute="bottom" constant="30" id="DHH-Oj-pgR"/>
                             <constraint firstItem="iOi-Q9-Mu4" firstAttribute="leading" secondItem="Y9f-ir-bQY" secondAttribute="leading" id="DbT-0R-7m2"/>
+                            <constraint firstItem="iOi-Q9-Mu4" firstAttribute="top" secondItem="Y9f-ir-bQY" secondAttribute="bottom" constant="10" id="J3U-uA-ZeP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iOi-Q9-Mu4" secondAttribute="trailing" id="K7X-wc-Ipd"/>
                             <constraint firstItem="oM7-jA-uvd" firstAttribute="top" secondItem="VC2-cK-oyp" secondAttribute="bottom" id="RTI-ml-tDf"/>
                             <constraint firstItem="Y9f-ir-bQY" firstAttribute="centerX" secondItem="TCt-RD-pYM" secondAttribute="centerX" id="Rdy-0t-zt1"/>
-                            <constraint firstItem="Y37-Ku-mdX" firstAttribute="top" secondItem="ekh-7h-SGw" secondAttribute="bottom" constant="10" id="VZa-JY-FkG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3Qn-W1-fig" secondAttribute="trailing" id="WAP-dR-scE"/>
                             <constraint firstItem="3Qn-W1-fig" firstAttribute="leading" secondItem="TCt-RD-pYM" secondAttribute="leadingMargin" id="Zk1-zI-gIZ"/>
-                            <constraint firstItem="ekh-7h-SGw" firstAttribute="top" secondItem="c7q-hc-Uhe" secondAttribute="bottom" constant="30" id="ciK-3O-kGe"/>
-                            <constraint firstItem="Y37-Ku-mdX" firstAttribute="centerX" secondItem="TCt-RD-pYM" secondAttribute="centerX" id="gfL-33-SjY"/>
-                            <constraint firstItem="3Qn-W1-fig" firstAttribute="top" secondItem="iOi-Q9-Mu4" secondAttribute="bottom" id="gll-bt-kzN"/>
-                            <constraint firstItem="Y37-Ku-mdX" firstAttribute="leading" secondItem="TCt-RD-pYM" secondAttribute="leadingMargin" id="i2z-hH-t3O"/>
+                            <constraint firstItem="3Qn-W1-fig" firstAttribute="top" secondItem="iOi-Q9-Mu4" secondAttribute="bottom" constant="10" id="cA2-sq-E4s"/>
                             <constraint firstItem="3Qn-W1-fig" firstAttribute="leading" secondItem="Y9f-ir-bQY" secondAttribute="leading" id="igi-EA-tFE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Y9f-ir-bQY" secondAttribute="trailing" id="m0y-uY-nyQ"/>
-                            <constraint firstItem="VC2-cK-oyp" firstAttribute="top" secondItem="Y37-Ku-mdX" secondAttribute="bottom" id="n1N-nA-IvG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Y37-Ku-mdX" secondAttribute="trailing" id="qcQ-qG-x7q"/>
+                            <constraint firstItem="Jlw-kb-BV2" firstAttribute="centerX" secondItem="TCt-RD-pYM" secondAttribute="centerX" id="xRs-Gi-ods"/>
                             <constraint firstItem="VC2-cK-oyp" firstAttribute="centerX" secondItem="TCt-RD-pYM" secondAttribute="centerX" id="xhJ-25-w5U"/>
-                            <constraint firstItem="ekh-7h-SGw" firstAttribute="centerX" secondItem="TCt-RD-pYM" secondAttribute="centerX" id="y6C-Hz-6Px"/>
                             <constraint firstItem="Y9f-ir-bQY" firstAttribute="top" secondItem="oM7-jA-uvd" secondAttribute="bottom" constant="10" id="yVY-NG-Vq7"/>
                         </constraints>
                     </view>
@@ -1138,14 +1192,14 @@ Cg
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="スパイ">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.23921568627450979" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -1155,13 +1209,13 @@ Cg
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mag-dh-TTe">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mag-dh-TTe">
                                 <frame key="frameInset" minX="115" minY="69" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="geI-Yt-4L4"/>
@@ -1171,13 +1225,14 @@ Cg
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2n-sS-Ycr">
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">キーワードの設定をかんたんにすると
+                                        <string key="content">キーワードの設定を
+かんたんにすると
 スパイが容易に勝利してしまうので、
 少し難しめのものにしましょう。</string>
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -1189,7 +1244,7 @@ Cg
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="戻る"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="スパイモード" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBw-xm-yhp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="スパイモード" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBw-xm-yhp">
                                 <frame key="frameInset" minX="115" minY="28" width="144" height="33"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1197,37 +1252,24 @@ Cg
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzc-RX-mip">
                                 <attributedString key="attributedText">
-                                    <fragment content="スパイの一人勝ち">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.23921999999999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
                                     <fragment>
-                                        <string key="content">になります。
-ただし、スパイが正解を取れなかった場合
-</string>
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">正体を公開され、その場で敗北が決定します。
+                                        <string key="content">スパイの一人勝ちになります。
+スパイが
+正解を取れなかった場合
+正体を公開され、
+その場で敗北が決定します。
 </string>
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="なお、以降、ゲームからは離脱します。">
+                                    <fragment content="以降、ゲームからは離脱します。">
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -1238,10 +1280,12 @@ Cg
                         <constraints>
                             <constraint firstItem="pzc-RX-mip" firstAttribute="top" secondItem="sIG-uf-GEc" secondAttribute="bottom" id="FlS-Qa-1UR"/>
                             <constraint firstItem="J2n-sS-Ycr" firstAttribute="top" secondItem="pzc-RX-mip" secondAttribute="bottom" constant="30" id="GIh-QB-tcY"/>
+                            <constraint firstItem="mag-dh-TTe" firstAttribute="centerX" secondItem="GCU-58-3Cu" secondAttribute="centerX" id="JaI-SX-7Eg"/>
                             <constraint firstItem="cBw-xm-yhp" firstAttribute="top" secondItem="sAs-Wa-ToK" secondAttribute="bottom" constant="10" id="MXA-6A-xf3"/>
                             <constraint firstItem="J2n-sS-Ycr" firstAttribute="leading" secondItem="GCU-58-3Cu" secondAttribute="leadingMargin" id="O7T-O0-dCH"/>
                             <constraint firstItem="pzc-RX-mip" firstAttribute="trailing" secondItem="GCU-58-3Cu" secondAttribute="trailingMargin" id="OFx-Vr-gA4"/>
                             <constraint firstItem="J2n-sS-Ycr" firstAttribute="trailing" secondItem="GCU-58-3Cu" secondAttribute="trailingMargin" id="Pnm-JP-59s"/>
+                            <constraint firstItem="cBw-xm-yhp" firstAttribute="centerX" secondItem="GCU-58-3Cu" secondAttribute="centerX" id="RfT-ho-oaE"/>
                             <constraint firstItem="sIG-uf-GEc" firstAttribute="top" secondItem="mag-dh-TTe" secondAttribute="bottom" constant="20" id="cKH-bN-IYW"/>
                             <constraint firstItem="pzc-RX-mip" firstAttribute="leading" secondItem="GCU-58-3Cu" secondAttribute="leadingMargin" id="e2W-qU-n3g"/>
                             <constraint firstItem="mag-dh-TTe" firstAttribute="top" secondItem="cBw-xm-yhp" secondAttribute="bottom" id="fNd-wT-8xg"/>
@@ -1257,7 +1301,7 @@ Cg
         <!--Rule3 View Controller-->
         <scene sceneID="Raz-lf-P0p">
             <objects>
-                <viewController storyboardIdentifier="rule3ViewController" id="Wb6-1r-TWv" customClass="rule3ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rule3ViewController" id="Wb6-1r-TWv" customClass="rule3ViewController" customModule="InsiderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fbt-m8-E8N"/>
                         <viewControllerLayoutGuide type="bottom" id="Rch-zp-0JW"/>
@@ -1279,7 +1323,7 @@ Cg
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -1288,7 +1332,7 @@ Cg
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.240234375" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -1300,7 +1344,7 @@ Cg
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -1314,7 +1358,7 @@ Cg
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -1339,16 +1383,13 @@ Cg
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" currentPage="3" translatesAutoresizingMaskIntoConstraints="NO" id="jUU-AR-miI">
-                                <frame key="frameInset" minX="168" minY="630" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" currentPage="3" translatesAutoresizingMaskIntoConstraints="NO" id="jUU-AR-miI"/>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1357,6 +1398,7 @@ Cg
                             <constraint firstItem="kcK-0Y-orV" firstAttribute="leading" secondItem="cc7-Ig-SIi" secondAttribute="leadingMargin" id="8NS-CW-XwM"/>
                             <constraint firstItem="IDP-ZY-1KN" firstAttribute="top" secondItem="YOZ-L2-n2t" secondAttribute="bottom" constant="30" id="KOC-ZR-AGl"/>
                             <constraint firstItem="DPD-xu-bG2" firstAttribute="trailing" secondItem="cc7-Ig-SIi" secondAttribute="trailingMargin" id="L9S-NG-pEP"/>
+                            <constraint firstItem="Rch-zp-0JW" firstAttribute="top" secondItem="jUU-AR-miI" secondAttribute="bottom" id="Q58-33-Eay"/>
                             <constraint firstItem="DPD-xu-bG2" firstAttribute="centerX" secondItem="cc7-Ig-SIi" secondAttribute="centerX" id="Qqt-dq-arX"/>
                             <constraint firstItem="U0h-wX-05B" firstAttribute="centerX" secondItem="cc7-Ig-SIi" secondAttribute="centerX" id="YMO-BU-FR2"/>
                             <constraint firstItem="kcK-0Y-orV" firstAttribute="top" secondItem="IDP-ZY-1KN" secondAttribute="bottom" id="aJO-aT-qZd"/>
@@ -1367,6 +1409,7 @@ Cg
                             <constraint firstItem="IDP-ZY-1KN" firstAttribute="leading" secondItem="cc7-Ig-SIi" secondAttribute="leadingMargin" id="o9B-mk-7Pe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IDP-ZY-1KN" secondAttribute="trailing" id="xW0-Nl-LR5"/>
                             <constraint firstItem="IDP-ZY-1KN" firstAttribute="centerX" secondItem="cc7-Ig-SIi" secondAttribute="centerX" id="xc7-jB-2F7"/>
+                            <constraint firstItem="jUU-AR-miI" firstAttribute="centerX" secondItem="cc7-Ig-SIi" secondAttribute="centerX" id="yyM-bY-ZH1"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -1377,7 +1420,7 @@ Cg
         <!--Rule4 View Controller-->
         <scene sceneID="0hi-n9-mQS">
             <objects>
-                <viewController storyboardIdentifier="rule4ViewController" id="k2g-gW-KTf" customClass="rule4ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rule4ViewController" id="k2g-gW-KTf" customClass="rule4ViewController" customModule="InsiderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L8N-h8-RC7"/>
                         <viewControllerLayoutGuide type="bottom" id="T0R-7O-o9a"/>
@@ -1396,7 +1439,7 @@ Cg
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -1585,16 +1628,13 @@ Cg
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" currentPage="4" translatesAutoresizingMaskIntoConstraints="NO" id="Zqa-aN-wGB">
-                                <frame key="frameInset" minX="163" minY="634" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" currentPage="4" translatesAutoresizingMaskIntoConstraints="NO" id="Zqa-aN-wGB"/>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
@@ -1602,6 +1642,7 @@ Cg
                             <constraint firstAttribute="trailingMargin" secondItem="kqH-Te-cXc" secondAttribute="trailing" id="Azx-Dh-C7Y"/>
                             <constraint firstItem="5pP-kp-5tp" firstAttribute="top" secondItem="L8N-h8-RC7" secondAttribute="bottom" constant="30" id="Ezf-AX-7vH"/>
                             <constraint firstItem="1Sh-Km-7Nd" firstAttribute="top" secondItem="5pP-kp-5tp" secondAttribute="bottom" id="RNa-qU-6ik"/>
+                            <constraint firstItem="Zqa-aN-wGB" firstAttribute="centerX" secondItem="6ZZ-nT-x84" secondAttribute="centerX" id="U0N-l1-B1p"/>
                             <constraint firstItem="N18-0P-f9J" firstAttribute="leading" secondItem="6ZZ-nT-x84" secondAttribute="leadingMargin" id="WBR-XS-nQe"/>
                             <constraint firstItem="N18-0P-f9J" firstAttribute="trailing" secondItem="6ZZ-nT-x84" secondAttribute="trailingMargin" id="ZrA-Ax-xRA"/>
                             <constraint firstItem="kqH-Te-cXc" firstAttribute="leading" secondItem="6ZZ-nT-x84" secondAttribute="leadingMargin" id="blM-gR-o8v"/>
@@ -1611,6 +1652,7 @@ Cg
                             <constraint firstItem="N18-0P-f9J" firstAttribute="top" secondItem="1Sh-Km-7Nd" secondAttribute="bottom" constant="30" id="n7u-wH-0Nf"/>
                             <constraint firstItem="rR9-83-g1S" firstAttribute="top" secondItem="kqH-Te-cXc" secondAttribute="bottom" constant="10" id="tKT-RB-6i6"/>
                             <constraint firstItem="BqB-Ue-mvX" firstAttribute="leading" secondItem="6ZZ-nT-x84" secondAttribute="leadingMargin" id="tVk-Qh-M4i"/>
+                            <constraint firstItem="T0R-7O-o9a" firstAttribute="top" secondItem="Zqa-aN-wGB" secondAttribute="bottom" id="u9G-8A-YqT"/>
                             <constraint firstItem="BqB-Ue-mvX" firstAttribute="trailing" secondItem="6ZZ-nT-x84" secondAttribute="trailingMargin" id="vdb-pB-Ugd"/>
                             <constraint firstItem="rR9-83-g1S" firstAttribute="leading" secondItem="6ZZ-nT-x84" secondAttribute="leadingMargin" id="wbu-Hi-LYT"/>
                             <constraint firstItem="1Sh-Km-7Nd" firstAttribute="centerX" secondItem="6ZZ-nT-x84" secondAttribute="centerX" id="zwt-ty-Tkc"/>
@@ -1624,7 +1666,7 @@ Cg
         <!--Rule5 View Controller-->
         <scene sceneID="mwa-uv-fqq">
             <objects>
-                <viewController storyboardIdentifier="rule5ViewController" id="u7N-sf-Xm1" customClass="rule5ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rule5ViewController" id="u7N-sf-Xm1" customClass="rule5ViewController" customModule="InsiderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hxp-zR-SLF"/>
                         <viewControllerLayoutGuide type="bottom" id="0ez-Zh-Ud5"/>
@@ -1654,7 +1696,7 @@ Cg
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -1682,19 +1724,23 @@ Cg
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" currentPage="5" translatesAutoresizingMaskIntoConstraints="NO" id="es6-E0-Zhc">
-                                <frame key="frameInset" minX="168" minY="630" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" currentPage="5" translatesAutoresizingMaskIntoConstraints="NO" id="es6-E0-Zhc"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKx-6P-QRO">
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="backButton:" destination="u7N-sf-Xm1" eventType="touchUpInside" id="YNA-1s-s0c"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="0ez-Zh-Ud5" firstAttribute="top" secondItem="es6-E0-Zhc" secondAttribute="bottom" id="3Bj-6h-hM1"/>
                             <constraint firstItem="sH7-Mb-GLF" firstAttribute="trailing" secondItem="fHo-vc-5LT" secondAttribute="trailingMargin" id="594-E7-gol"/>
                             <constraint firstItem="BHM-Eb-u9e" firstAttribute="top" secondItem="sH7-Mb-GLF" secondAttribute="bottom" id="7oA-Er-Y5c"/>
                             <constraint firstItem="81q-2x-2h9" firstAttribute="top" secondItem="hxp-zR-SLF" secondAttribute="bottom" constant="30" id="DnJ-m2-MCN"/>
@@ -1703,11 +1749,14 @@ Cg
                             <constraint firstItem="OUH-Nn-DsE" firstAttribute="centerX" secondItem="fHo-vc-5LT" secondAttribute="centerX" id="UkT-Ly-0ah"/>
                             <constraint firstItem="BHM-Eb-u9e" firstAttribute="trailing" secondItem="fHo-vc-5LT" secondAttribute="trailingMargin" id="WBd-vU-VJV"/>
                             <constraint firstItem="sH7-Mb-GLF" firstAttribute="leading" secondItem="fHo-vc-5LT" secondAttribute="leadingMargin" id="eTn-XW-aee"/>
+                            <constraint firstItem="0ez-Zh-Ud5" firstAttribute="top" secondItem="uKx-6P-QRO" secondAttribute="bottom" id="fXz-b9-AW6"/>
                             <constraint firstItem="M5D-X1-rs8" firstAttribute="top" secondItem="81q-2x-2h9" secondAttribute="bottom" id="huZ-Us-4z0"/>
                             <constraint firstItem="sH7-Mb-GLF" firstAttribute="top" secondItem="M5D-X1-rs8" secondAttribute="bottom" constant="10" id="jcu-pe-Fgr"/>
+                            <constraint firstItem="uKx-6P-QRO" firstAttribute="trailing" secondItem="fHo-vc-5LT" secondAttribute="trailingMargin" id="kVT-0k-Ylh"/>
                             <constraint firstItem="0ez-Zh-Ud5" firstAttribute="top" secondItem="OUH-Nn-DsE" secondAttribute="bottom" constant="150" id="opV-Qf-3zt"/>
                             <constraint firstItem="81q-2x-2h9" firstAttribute="centerX" secondItem="fHo-vc-5LT" secondAttribute="centerX" id="sdq-Ib-mMY"/>
                             <constraint firstItem="BHM-Eb-u9e" firstAttribute="leading" secondItem="fHo-vc-5LT" secondAttribute="leadingMargin" id="wmw-Uo-cuj"/>
+                            <constraint firstItem="es6-E0-Zhc" firstAttribute="centerX" secondItem="fHo-vc-5LT" secondAttribute="centerX" id="x5g-M7-uVb"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -1718,7 +1767,7 @@ Cg
         <!--Rule2 View Controller-->
         <scene sceneID="flk-u1-nek">
             <objects>
-                <viewController storyboardIdentifier="rule2ViewController" id="vm8-DI-w87" customClass="rule2ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rule2ViewController" id="vm8-DI-w87" customClass="rule2ViewController" customModule="InsiderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="izW-Xd-1x8"/>
                         <viewControllerLayoutGuide type="bottom" id="GGH-4W-sxV"/>
@@ -1752,14 +1801,14 @@ Cg
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="キーワード">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.23921568627450979" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -1769,18 +1818,20 @@ Cg
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="全員敗北">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.23969184027777779" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
                                         <string key="content">です。
+
+
 ※このとき、出題者は
 「はい」か「いいえ」か「パス」以外は
 絶対に話してはいけません。
@@ -1789,7 +1840,7 @@ Cg
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="16" name="HiraginoSans-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -1806,21 +1857,20 @@ Cg
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="LN6-dN-1Tu">
-                                <frame key="frameInset" minX="168" minY="630" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="LN6-dN-1Tu"/>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="QaQ-US-TGW" secondAttribute="trailing" id="1Jw-l4-Kfq"/>
                             <constraint firstItem="w78-1w-soH" firstAttribute="top" secondItem="izW-Xd-1x8" secondAttribute="bottom" constant="30" id="41A-6G-Anj"/>
+                            <constraint firstItem="LN6-dN-1Tu" firstAttribute="centerX" secondItem="zAD-Tf-rIc" secondAttribute="centerX" id="8TF-34-ieM"/>
                             <constraint firstItem="OF9-Bf-oKj" firstAttribute="top" secondItem="w78-1w-soH" secondAttribute="bottom" id="9VI-Kj-P3z"/>
                             <constraint firstItem="w78-1w-soH" firstAttribute="centerX" secondItem="zAD-Tf-rIc" secondAttribute="centerX" id="CIR-It-u6X"/>
                             <constraint firstItem="QaQ-US-TGW" firstAttribute="leading" secondItem="zAD-Tf-rIc" secondAttribute="leadingMargin" id="FXi-wR-h44"/>
                             <constraint firstItem="OF9-Bf-oKj" firstAttribute="centerX" secondItem="zAD-Tf-rIc" secondAttribute="centerX" id="Ov6-B1-4qw"/>
                             <constraint firstItem="QaQ-US-TGW" firstAttribute="top" secondItem="OF9-Bf-oKj" secondAttribute="bottom" constant="10" id="aV8-mP-Iy3"/>
                             <constraint firstItem="QaQ-US-TGW" firstAttribute="centerX" secondItem="zAD-Tf-rIc" secondAttribute="centerX" id="cLg-Pe-2gb"/>
+                            <constraint firstItem="GGH-4W-sxV" firstAttribute="top" secondItem="LN6-dN-1Tu" secondAttribute="bottom" id="cdG-4s-x62"/>
                         </constraints>
                     </view>
                 </viewController>

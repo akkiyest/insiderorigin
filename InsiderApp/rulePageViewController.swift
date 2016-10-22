@@ -39,27 +39,33 @@ class rulePageViewController: UIPageViewController{
 }
 
 extension rulePageViewController : UIPageViewControllerDataSource {
-    
-    func pageViewController(_ pageViewController: UIPageViewController,
-                            viewControllerBefore viewControllerBeforeViewController: UIViewController) -> UIViewController? {
-        
-        if rulePageViewController.isKind(of: rule0ViewController.self) {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        if viewController.isKind(of: rule1ViewController.self) {
+            return getFirst()
+        } else if viewController.isKind(of: rule2ViewController.self){
             return getSecond()
-        } else if rulePageViewController.isKind(of: rule2ViewController.self) {
+        } else if viewController.isKind(of: rule3ViewController.self){
             return getThird()
-        } else if rulePageViewController.isKind(of: rule3ViewController.self) {
+        } else if viewController.isKind(of: rule4ViewController.self){
             return getFourth()
-        } else if rulePageViewController.isKind(of: rule4ViewController.self) {
+        } else if viewController.isKind(of: rule5ViewController.self){
             return getFifth()
-        } else if rulePageViewController.isKind(of: rule5ViewController.self) {
-            self.removeFromParentViewController()
-        } else {
-            return nil
         }
-        return nil
+            return nil
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        if viewController.isKind(of: rule0ViewController.self) {
+            return getSecond()
+        } else if viewController.isKind(of: rule1ViewController.self){
+            return getThird()
+        } else if viewController.isKind(of: rule2ViewController.self){
+            return getFourth()
+        } else if viewController.isKind(of: rule3ViewController.self){
+            return getFifth()
+        } else if viewController.isKind(of: rule4ViewController.self){
+            return getSixth()
+        }
         return nil
     }
 }

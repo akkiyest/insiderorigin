@@ -21,6 +21,9 @@ class rule5ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func backButton(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
