@@ -83,23 +83,22 @@ class settingViewController: UIViewController {
     }
     
     @IBAction func startButton(_ sender: AnyObject) {
-        var sendPLN = playerNumberTextField.text
-        var sendKEYtime = KeywordTime.text
-        var sendINStime = InsiderTime.text
         
         //プレイヤー人数とキーワード推理時間とインサイダー推理時間が空欄でないかチェックする
-        if sendPLN == ""{
-            let alert2: UIAlertController = UIAlertController(title: "プレイヤー数が不正です", message: "４〜１０を選択してください",preferredStyle:  UIAlertControllerStyle.alert)
+        let sendPLN = Int(playerNumberTextField.text!)
+        let sendKEYtime = Int(KeywordTime.text!)
+        let sendINStime = Int(InsiderTime.text!)
+        
+        if sendPLN == nil || sendKEYtime == nil || sendINStime == nil {
+            let alert2: UIAlertController = UIAlertController(title: "設定エラー", message: "設定に不正な値が入っています。\n確認してください",preferredStyle: UIAlertControllerStyle.alert)
             let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
-                (action: UIAlertAction!) -> Void in
-                print("OK")
-            })
+                (action: UIAlertAction!) -> Void in print("OK")})
+            
             alert2.addAction(defaultAction)
             present(alert2, animated: true, completion: nil)
-        } else {
-            return
         }
         
+        //確認メッセージを表示するため
         var msg:String = ""
         var msg2:String = ""
         
@@ -115,22 +114,35 @@ class settingViewController: UIViewController {
             msg2 = "スパイ有り\n"
         }
         
-        print(msg.self)
-        print(msg2.self)
+        let startAlert: UIAlertController = UIAlertController(title: "スタート確認", message:playerNumberTextField.text!+"人\n"+msg+msg2+"で開始します。\nよろしいですか？",preferredStyle:UIAlertControllerStyle.actionSheet)
         
+        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
+            // ボタンが押された時の処理を書く（クロージャ実装）
+            (action: UIAlertAction!) -> Void in
+            print("OK")
+            //プレイヤー人数（マスター含む）をnumで持つ
+            PlayerControll.sharedHQ.setPlayer(num: sendPLN)
+            PlayerControll.sharedHQ.pickNum()
+            let test1 = PlayerControll.sharedHQ.returnPASS()
+            print(test1)
+            let targetViewController = self.storyboard?.instantiateViewController(withIdentifier: "Input")
+            self.present(targetViewController!, animated: true, completion: nil)
+        })
+        // キャンセルボタン
+        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.cancel, handler:{
+            // ボタンが押された時の処理を書く（クロージャ実装）
+            (action: UIAlertAction!) -> Void in 
+            //ここでキャンセルする
+            print("CANCELED")
+        })
         
+        // ③ UIAlertControllerにActionを追加
+        startAlert.addAction(cancelAction)
+        startAlert.addAction(defaultAction)
+        
+        // ④ Alertを表示
+        present(startAlert, animated: true, completion: nil)
 
-        //インスタンスを実装
-        let HQ = PlayerControll()
-        //プレイヤー人数（マスター含む）をnumで持つ
-        let num:Int? = Int(playerNumberTextField.text!)
-        HQ.setPlayer(num: num)
-        //プレイヤー人数（マスターを抜く）を取得しランダムナンバーの配列を得ておく
-        let playernum = HQ.getPlayer()
-        let PASSz = HQ.pickNum(num: playernum)
-        
-        
-        
         
     }
 
@@ -139,13 +151,11 @@ class settingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //確定ボタンを押したら起きること　間違い有るかも
+    //確定ボタンを押したら起きること
     func boopla () {
         playerNumberTextField.resignFirstResponder()
         KeywordTime.resignFirstResponder()
         InsiderTime.resignFirstResponder()
     }
-    
-    
     
 }

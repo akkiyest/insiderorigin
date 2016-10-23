@@ -5,10 +5,12 @@
 //  Created by Akihiro Itoh on 2016/10/18.
 //  Copyright © 2016年 akihiro.itoh. All rights reserved.
 //
+// Singleton
+// http://egg-is-world.com/2016/01/18/swift-2-singleton/
 
 import UIKit
 
-class PlayerControll: UIResponder, UIApplicationDelegate {
+final class PlayerControll: UIResponder, UIApplicationDelegate {
     //プレイヤーの合計人数。ただし出題者の数は含まれない。
     var PlayerNum:Int = 0
     //プレイヤーIDは出題者の右隣のプレイヤーから順に0-1-2-3-...となるようにする
@@ -21,6 +23,8 @@ class PlayerControll: UIResponder, UIApplicationDelegate {
     //realNumbersは擬似乱数を並び替えた配列のうち、上からプレイヤー人数分だけ取って入れておく配列。
     var PASSCODEs:[String] = []
     
+    
+    
     //外部から受け取った数字をプレイヤーナンバーとして保存する。
     func setPlayer(num:Int?){
         PlayerNum = num!
@@ -32,15 +36,20 @@ class PlayerControll: UIResponder, UIApplicationDelegate {
         return PlayerNum
     }
     
-    //このメソッドにプレイヤー人数を渡すとIDの入った配列を返す
-    func pickNum(num:Int?) -> [String?]{
+    //このメソッドにプレイヤー人数を渡すとIDの入った配列を保存する
+    func pickNum(){
         var count = 0
         //配列を変更するメソッドを呼び出す
         shuffleBang(array: &defaultNumbers)
         while count < PlayerNum {
             PASSCODEs.append(defaultNumbers[count])
+            Names.append("")
+            Keywords.append("")
             count += 1
         }
+    }
+    
+    func returnPASS() -> [String?]{
         return PASSCODEs
     }
     
@@ -59,5 +68,17 @@ class PlayerControll: UIResponder, UIApplicationDelegate {
         shuffleBang(array: &copy)
         return copy
     }
-
+    
+    private override init() {
+        
+    }
+    
+    func destroy(){
+        PlayerNum = 0
+        PASSCODEs.removeAll()
+        Keywords.removeAll()
+        Names.removeAll()
+    }
+    
+    static var sharedHQ = PlayerControll()
 }
