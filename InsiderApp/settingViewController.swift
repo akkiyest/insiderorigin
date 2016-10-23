@@ -123,6 +123,8 @@ class settingViewController: UIViewController {
             //プレイヤー人数（マスター含む）をnumで持つ
             PlayerControll.sharedHQ.setPlayer(num: sendPLN)
             PlayerControll.sharedHQ.pickNum()
+            PlayerControll.sharedHQ.keyThinkTime = Int(self.KeywordTime.text!)!
+            PlayerControll.sharedHQ.insThinkTime = Int(self.InsiderTime.text!)!
             let test1 = PlayerControll.sharedHQ.returnPASS()
             print(test1)
             let targetViewController = self.storyboard?.instantiateViewController(withIdentifier: "Input")

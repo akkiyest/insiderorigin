@@ -22,15 +22,27 @@ final class PlayerControll: UIResponder, UIApplicationDelegate {
     var defaultNumbers:[String] = ["1023","0403","0130","6410","0666","0156","7312","8567","0008","9246","7447","2316","1267","7118","8689","8829","0345","9999","0612","0119","0874"]
     //realNumbersは擬似乱数を並び替えた配列のうち、上からプレイヤー人数分だけ取って入れておく配列。
     var PASSCODEs:[String] = []
-    
+    var insNUM:Int = 0
+    var spyNUM:Int = 0
+    var detectiveNUM:Int = 0
+    var keyThinkTime:Int = 0
+    var insThinkTime:Int = 0
+    var spymode:Int = 0
+    var detecmode:Int = 0
+    var gisinmode:Int = 0
     
     
     //外部から受け取った数字をプレイヤーナンバーとして保存する。
     func setPlayer(num:Int?){
         PlayerNum = num!
         //出題者の数は入れないので-１する
+        if gisinmode == 0{
         PlayerNum -= 1
+        } else if gisinmode == 1{
+            
+        }
     }
+    
     //外部から数字を取りたい場合にこのメソッドから取得する
     func getPlayer() -> Int{
         return PlayerNum
@@ -78,6 +90,7 @@ final class PlayerControll: UIResponder, UIApplicationDelegate {
         PASSCODEs.removeAll()
         Keywords.removeAll()
         Names.removeAll()
+        //まだ消せてないものあり
     }
     
     static var sharedHQ = PlayerControll()

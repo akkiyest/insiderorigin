@@ -23,7 +23,6 @@ class InputViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("testAIUEO")
         titles.append("Welcome to Insider Orig!ns")
         super.viewDidLoad()
         let RAN1 = arc4random_uniform(2)
@@ -123,9 +122,6 @@ class InputViewController: UIViewController {
                 self.endInput()
             }else{
                 self.nextplayer()
-                print("テストだよ")
-                print(self.counts)
-                print(PlayerControll.sharedHQ.PlayerNum)
             }
         })
         messages.addAction(defaultAction)
@@ -137,10 +133,10 @@ class InputViewController: UIViewController {
         let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in
+            self.rolling()
             if self.counts == PlayerControll.sharedHQ.PlayerNum{
                 self.endInput()
             } else {
-            self.rolling()
             self.appers()
             }
         }
@@ -169,7 +165,7 @@ class InputViewController: UIViewController {
         let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in
-            let targetViewController = self.storyboard?.instantiateViewController(withIdentifier: "Input")
+            let targetViewController = self.storyboard?.instantiateViewController(withIdentifier: "checkAnswer")
             self.present(targetViewController!, animated: true, completion: nil)
         })
         messages.addAction(defaultAction)

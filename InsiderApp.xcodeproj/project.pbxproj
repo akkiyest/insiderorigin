@@ -11,6 +11,7 @@
 		F830CF161DB4ED35002317FF /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F830CF151DB4ED35002317FF /* settingViewController.swift */; };
 		F84768FE1DBB7F7C0088251C /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84768FD1DBB7F7C0088251C /* InputViewController.swift */; };
 		F84769001DBCA6B00088251C /* checkAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84768FF1DBCA6B00088251C /* checkAnswerViewController.swift */; };
+		F84769021DBCB6110088251C /* timeKeepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84769011DBCB6110088251C /* timeKeepViewController.swift */; };
 		F89455DF1DA90338004F6D29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89455DE1DA90338004F6D29 /* AppDelegate.swift */; };
 		F89455E11DA90338004F6D29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89455E01DA90338004F6D29 /* ViewController.swift */; };
 		F89455E41DA90338004F6D29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F89455E21DA90338004F6D29 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		F830CF151DB4ED35002317FF /* settingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingViewController.swift; sourceTree = "<group>"; };
 		F84768FD1DBB7F7C0088251C /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		F84768FF1DBCA6B00088251C /* checkAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkAnswerViewController.swift; sourceTree = "<group>"; };
+		F84769011DBCB6110088251C /* timeKeepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = timeKeepViewController.swift; sourceTree = "<group>"; };
 		F89455DB1DA90338004F6D29 /* InsiderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InsiderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F89455DE1DA90338004F6D29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F89455E01DA90338004F6D29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				F89455E01DA90338004F6D29 /* ViewController.swift */,
 				F8287B611DB6611400582291 /* PlayerControll.swift */,
 				F89455E21DA90338004F6D29 /* Main.storyboard */,
+				F84769011DBCB6110088251C /* timeKeepViewController.swift */,
 				F84768FD1DBB7F7C0088251C /* InputViewController.swift */,
 				F8F468441DB8A42C006D3EB6 /* rule0ViewController.swift */,
 				F8F468401DB8A0D9006D3EB6 /* rulePageViewController.swift */,
@@ -172,6 +175,7 @@
 				F84768FE1DBB7F7C0088251C /* InputViewController.swift in Sources */,
 				F8287B621DB6611400582291 /* PlayerControll.swift in Sources */,
 				F8F468451DB8A42C006D3EB6 /* rule0ViewController.swift in Sources */,
+				F84769021DBCB6110088251C /* timeKeepViewController.swift in Sources */,
 				F8F4684B1DB8AFF1006D3EB6 /* rule3ViewController.swift in Sources */,
 				F8F468471DB8AF6B006D3EB6 /* rule1ViewController.swift in Sources */,
 				F8F468491DB8AF7D006D3EB6 /* rule2ViewController.swift in Sources */,
