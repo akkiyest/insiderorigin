@@ -16,6 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //アイドルタイマーを起動させない
+        UIApplication.shared.isIdleTimerDisabled = true
+        return true
+    }
+    
+    private func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        // first time to launch this app
+        let defaults = UserDefaults.standard
+        var dic = ["firstLaunch": true]
+        defaults.register(defaults: dic)
+        
         return true
     }
     

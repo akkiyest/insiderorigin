@@ -5,8 +5,7 @@
 //  Created by Akihiro Itoh on 2016/10/18.
 //  Copyright © 2016年 akihiro.itoh. All rights reserved.
 //
-// Singleton
-// http://egg-is-world.com/2016/01/18/swift-2-singleton/
+
 
 import UIKit
 
@@ -22,26 +21,56 @@ final class PlayerControll: UIResponder, UIApplicationDelegate {
     var defaultNumbers:[String] = ["1023","0403","0130","6410","0666","0156","7312","8567","0008","9246","7447","2316","1267","7118","8689","8829","0345","9999","0612","0119","0874"]
     //realNumbersは擬似乱数を並び替えた配列のうち、上からプレイヤー人数分だけ取って入れておく配列。
     var PASSCODEs:[String] = []
-    var insNUM:Int = 0
-    var spyNUM:Int = 0
-    var detectiveNUM:Int = 0
+    //システム上で持っておく、犯人とかの番号
+    var insNUM:Int = 999
+    var spyNUM:Int = 999
+    //探偵が見た人
+    var detectiveNUM:Int = 999
+    
+    //時間　リセット必要
     var keyThinkTime:Int = 0
     var insThinkTime:Int = 0
+    
+    //モードを保存する　リセット必要 1がON
     var spymode:Int = 0
     var detecmode:Int = 0
     var gisinmode:Int = 0
+    var hanseikai:Int = 0
+    var didend:Int = 0
     
+    //ゲームの進行に必要な番号　すべてリセット必要
+    var guilty:Int = 999
+    var detecskill:Int = 1
+    var detecguilt:Int = 999
+    var seikaisha:Int = 999
+    let defaults = UserDefaults.standard
+    var oldAnswers:[String?] = []
     
     //外部から受け取った数字をプレイヤーナンバーとして保存する。
     func setPlayer(num:Int?){
         PlayerNum = num!
         //出題者の数は入れないので-１する
         if gisinmode == 0{
-        PlayerNum -= 1
+            PlayerNum -= 1
         } else if gisinmode == 1{
             
+            self.Names.append("インサイダーは居ない")
+
+            
+            if defaults.bool(forKey: "firstLaunch") {
+                
+                // Some Process will be here
+                oldAnswers.append("usagi")
+                // off the flag to know if it is first time to launch
+                defaults.set(false, forKey: "firstLaunch")
+            }
+            oldAnswers.append("usagi")
+            Randomize()
+            shuffleBang(array: &oldAnswers)
+            self.Keywords.append(oldAnswers[0])
         }
     }
+    
     
     //外部から数字を取りたい場合にこのメソッドから取得する
     func getPlayer() -> Int{
@@ -90,7 +119,29 @@ final class PlayerControll: UIResponder, UIApplicationDelegate {
         PASSCODEs.removeAll()
         Keywords.removeAll()
         Names.removeAll()
-        //まだ消せてないものあり
+        insNUM = 999
+        spyNUM = 999
+        detectiveNUM = 999
+        keyThinkTime = 0
+        insThinkTime = 0
+        
+        //モードを保存する　リセット必要 1がON
+        spymode = 0
+        detecmode = 0
+        gisinmode = 0
+        hanseikai = 0
+        
+        
+        guilty = 999
+        detecskill = 1
+        detecguilt = 999
+        seikaisha = 999
+    }
+    
+    func Randomize(){
+        let data = PlayerControll.sharedHQ.defaults.object(forKey: "Ans") as! NSData
+        oldAnswers = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [String?]
+        print(oldAnswers)
     }
     
     static var sharedHQ = PlayerControll()

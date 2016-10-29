@@ -18,8 +18,24 @@ class InputViewController: UIViewController {
     @IBOutlet weak var Name: UITextField!
     @IBOutlet weak var Number: UILabel!
     @IBOutlet weak var Keywords: UITextField!
+    let numberToolbar: UIToolbar = UIToolbar()
     
+    @IBOutlet weak var imageview: UIImageView!
     override func viewDidLoad(){
+        super.viewDidLoad()
+        imageview.image = #imageLiteral(resourceName: "scene2")
+        
+        numberToolbar.barStyle = UIBarStyle.blackTranslucent
+        numberToolbar.items=[
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil),
+            UIBarButtonItem(title: "確定", style: UIBarButtonItemStyle.plain, target: self, action: #selector(settingViewController.boopla))
+        ]
+        
+        
+        numberToolbar.sizeToFit()
+        Name.inputAccessoryView = numberToolbar
+        Keywords.inputAccessoryView = numberToolbar
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -33,11 +49,12 @@ class InputViewController: UIViewController {
         }
         
         //インサイダーがいないモード実装
-        //キーワードをログから取る、countを１回まわす
-        //if
+        //先行して[0]の名前に「インサイダーは居ない」と、ランダムのキーワードをログから取る、countを１回まわす
+        if PlayerControll.sharedHQ.gisinmode == 1{
+            rolling()
+        }
         
-        
-        let messages: UIAlertController? = UIAlertController(title: self.titles[self.counts], message:self.msg[self.counts],preferredStyle:UIAlertControllerStyle.alert)
+        let messages: UIAlertController? = UIAlertController(title: titles[0], message:self.msg[0],preferredStyle:UIAlertControllerStyle.alert)
         let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in
@@ -96,6 +113,28 @@ class InputViewController: UIViewController {
     }
     //進むボタンの処理
     @IBAction func goButton(_ sender: AnyObject) {
+        if  Name.text! == ""{
+            let messages:UIAlertController = UIAlertController(title: "注意", message:"名前がありません。",preferredStyle:UIAlertControllerStyle.alert)
+            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
+                // ボタンが押された時の処理を書く（クロージャ実装）
+                (action: UIAlertAction!) -> Void in
+            })
+            messages.addAction(defaultAction)
+            self.present(messages, animated: true, completion: nil)
+            
+        } else if Keywords.text! == ""{
+            let messages:UIAlertController = UIAlertController(title: "注意", message:"キーワードが未入力です。",preferredStyle:UIAlertControllerStyle.alert)
+            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
+                // ボタンが押された時の処理を書く（クロージャ実装）
+                (action: UIAlertAction!) -> Void in
+            })
+            messages.addAction(defaultAction)
+            self.present(messages, animated: true, completion: nil)
+            
+        }
+        
+        
+        
         let messages:UIAlertController = UIAlertController(title: "確認", message:Name.text!+"さん\nキーワードは"+Keywords.text!,preferredStyle:UIAlertControllerStyle.alert)
         let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
             // ボタンが押された時の処理を書く（クロージャ実装）
@@ -114,7 +153,7 @@ class InputViewController: UIViewController {
         //消す
         Name.text = ""
         Keywords.text = ""
-        let messages:UIAlertController = UIAlertController(title: "確認しました。", message:"パスコードを\n記憶しておいてください。\n",preferredStyle:UIAlertControllerStyle.alert)
+        let messages:UIAlertController = UIAlertController(title: "確認しました。", message:"パスコードを\n記憶しておいてください。",preferredStyle:UIAlertControllerStyle.alert)
         let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in
@@ -173,13 +212,16 @@ class InputViewController: UIViewController {
         
     }
     
-    
+    //入力を中止するときのメソッド
     @IBAction func stopInput(_ sender: AnyObject) {
     PlayerControll.sharedHQ.destroy()
     dismiss(animated: true, completion: nil )
     }
     
-    
+    func boopla(){
+        Name.resignFirstResponder()
+        Keywords.resignFirstResponder()
+    }
     
     
 }

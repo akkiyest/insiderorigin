@@ -10,9 +10,12 @@ import UIKit
 
 class rule2ViewController: UIViewController {
 
+    @IBOutlet weak var imageview: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let image =  #imageLiteral(resourceName: "scene3")
+        imageview.image = image
         // Do any additional setup after loading the view.
     }
 

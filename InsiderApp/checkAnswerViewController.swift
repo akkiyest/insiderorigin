@@ -10,11 +10,13 @@ import UIKit
 
 class checkAnswerViewController: UIViewController {
     
-    var INSnum:Int = 0
+    @IBOutlet weak var imageview: UIImageView!
+    var INSnum:Int = 999
     @IBOutlet weak var answerLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageview.image = #imageLiteral(resourceName: "master")
 
         // Do any additional setup after loading the view.
     }
@@ -26,8 +28,8 @@ class checkAnswerViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         diceRoll()
-        let messages: UIAlertController? = UIAlertController(title:"確認", message: "あなたは出題者ですか？",preferredStyle:UIAlertControllerStyle.alert)
-        let defaultAction: UIAlertAction = UIAlertAction(title: "YES", style: UIAlertActionStyle.default, handler:{
+        let messages: UIAlertController? = UIAlertController(title:"確認", message: "出題者しか見えないように端末を持ち、\nOKを押してください。",preferredStyle:UIAlertControllerStyle.alert)
+        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in
             self.answerLabel.text = PlayerControll.sharedHQ.Keywords[self.INSnum]
@@ -98,7 +100,12 @@ class checkAnswerViewController: UIViewController {
     func nextstep(){
         PlayerControll.sharedHQ.insNUM = self.INSnum
         //スパイモード用
-        let msg:String = ""
+        var msg:String = ""
+        if PlayerControll.sharedHQ.spymode == 1{
+            diceReroll()
+            PlayerControll.sharedHQ.spyNUM = self.INSnum
+            msg = "また、正解すると勝利を独占するスパイがいます。/nそれは"+PlayerControll.sharedHQ.PASSCODEs[PlayerControll.sharedHQ.insNUM]+"番の人です。"
+        }
         let messages: UIAlertController? = UIAlertController(title:"読み上げてください。", message: "インサイダーは\nパスコード"+PlayerControll.sharedHQ.PASSCODEs[PlayerControll.sharedHQ.insNUM]+"番の人です。"+msg,preferredStyle:UIAlertControllerStyle.alert)
         let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
             // ボタンが押された時の処理を書く（クロージャ実装）
@@ -111,7 +118,7 @@ class checkAnswerViewController: UIViewController {
     }
     
     func thirdstep(){
-        let messages: UIAlertController? = UIAlertController(title:"読み上げてください。", message: "それではキーワードをみなさんに当ててもらいます。\n私は\n「はい」か「いいえ」か「パス」\nしか話せません。\n制限時間は"+PlayerControll.sharedHQ.keyThinkTime.description+"分です。\nはじめます。",preferredStyle:UIAlertControllerStyle.alert)
+        let messages: UIAlertController? = UIAlertController(title:"読み上げてください。", message: "それではキーワードをみなさんに当ててもらいます。\n私は\n「はい」か「いいえ」か「パス」\nしか話せません。\n制限時間は"+PlayerControll.sharedHQ.keyThinkTime.description+"分です。\n端末をタイマー代わりにします。\nそれではスタートです。",preferredStyle:UIAlertControllerStyle.alert)
         let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in

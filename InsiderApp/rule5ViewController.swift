@@ -9,9 +9,11 @@
 import UIKit
 
 class rule5ViewController: UIViewController {
+    @IBOutlet weak var imageview: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageview.image = #imageLiteral(resourceName: "scene6")
 
         // Do any additional setup after loading the view.
     }

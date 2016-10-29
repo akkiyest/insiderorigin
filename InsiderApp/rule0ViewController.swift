@@ -1,4 +1,4 @@
-//
+        //
 //  rule0ViewController.swift
 //  InsiderApp
 //
@@ -9,10 +9,12 @@
 import UIKit
 
 class rule0ViewController: UIViewController {
+    @IBOutlet weak var imageview: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let image1 = #imageLiteral(resourceName: "scene1")
+        imageview.image = image1
         // Do any additional setup after loading the view.
     }
 

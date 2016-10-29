@@ -4,7 +4,7 @@
 //
 //  Created by Akihiro Itoh on 2016/10/17.
 //  Copyright © 2016年 akihiro.itoh. All rights reserved.
-//
+//rgb(167, 56, 56)
 
 import UIKit
 
@@ -20,6 +20,7 @@ class settingViewController: UIViewController {
     @IBOutlet weak var noonedoubtsswitch: UISwitch!
     @IBOutlet weak var hanseikaiswitch: UISwitch!
     @IBOutlet weak var spymodeswitch: UISwitch!
+    @IBOutlet weak var imagetest: UIImageView!
     
     
     //アドバンスドモードのところにあるスイッチをオンにすると３つ全部オンになる、オフにしたら全部オフになる
@@ -67,6 +68,7 @@ class settingViewController: UIViewController {
             UIBarButtonItem(title: "確定", style: UIBarButtonItemStyle.plain, target: self, action: #selector(settingViewController.boopla))
         ]
         
+        
         numberToolbar.sizeToFit()
         
         playerNumberTextField.inputAccessoryView = numberToolbar
@@ -80,6 +82,9 @@ class settingViewController: UIViewController {
         hanseikaiswitch.setOn(false, animated: false)
         spymodeswitch.setOn(false, animated: false)
         // Do any additional setup after loading the view.
+        //let image1 = UIImage(named:"#imageLiteral(resourceName: "civilian,")")
+        let image1 = #imageLiteral(resourceName: "insider")
+        imagetest.image = image1
     }
     
     @IBAction func startButton(_ sender: AnyObject) {
@@ -104,14 +109,39 @@ class settingViewController: UIViewController {
         
         if advancedswitch.isOn {
         msg = "アドバンスドモードON\n"
-        //探偵モード、ダウトモード、スパイモードのフラグをすべて1にする（未記入）
+        //探偵モード、疑心モード、モードのフラグをすべて1にする（未記入）
+            PlayerControll.sharedHQ.detecmode = 1
+            PlayerControll.sharedHQ.gisinmode = 1
+            PlayerControll.sharedHQ.hanseikai = 1
         } else if advancedswitch.isOn == false && detectiveswitch.isOn || noonedoubtsswitch.isOn || hanseikaiswitch.isOn {
-            msg = "個別設定ON\n"
+            if detectiveswitch.isOn{
+                PlayerControll.sharedHQ.detecmode = 1
+                msg += "探偵モードON\n"
+            }else{
+                PlayerControll.sharedHQ.detecmode = 0
+            }
+            
+            if noonedoubtsswitch.isOn{
+                PlayerControll.sharedHQ.gisinmode = 1
+                msg += "疑心暗鬼モードON\n"
+            }else{
+                PlayerControll.sharedHQ.gisinmode = 0
+            }
+            
+            if hanseikaiswitch.isOn{
+                PlayerControll.sharedHQ.hanseikai = 1
+                msg += "反省会モードON\n"
+            }else{
+                PlayerControll.sharedHQ.hanseikai = 0
+            }
         }
 
         
         if spymodeswitch.isOn{
             msg2 = "スパイ有り\n"
+            PlayerControll.sharedHQ.spymode = 1
+        } else {
+            PlayerControll.sharedHQ.spymode = 0
         }
         
         let startAlert: UIAlertController = UIAlertController(title: "スタート確認", message:playerNumberTextField.text!+"人\n"+msg+msg2+"で開始します。\nよろしいですか？",preferredStyle:UIAlertControllerStyle.actionSheet)
@@ -135,7 +165,6 @@ class settingViewController: UIViewController {
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in 
             //ここでキャンセルする
-            print("CANCELED")
         })
         
         // ③ UIAlertControllerにActionを追加
