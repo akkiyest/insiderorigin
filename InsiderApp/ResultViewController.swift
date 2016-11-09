@@ -64,13 +64,11 @@ class ResultViewController: UIViewController {
     }
     
     func confirm(){
-        let messages: UIAlertController? = UIAlertController(title:"確認", message: "今回のキーワード\n"+PlayerControll.sharedHQ.Keywords[PlayerControll.sharedHQ.insNUM]!+"/nは良問でしたか？",preferredStyle:UIAlertControllerStyle.alert)
+        let messages: UIAlertController? = UIAlertController(title:"確認", message: "今回のキーワード\n"+PlayerControll.sharedHQ.Keywords[PlayerControll.sharedHQ.insNUM]!+"\nは\"良問\"でしたか？",preferredStyle:UIAlertControllerStyle.alert)
         let defaultAction: UIAlertAction = UIAlertAction(title: "YES", style: UIAlertActionStyle.default, handler:{
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in
-            
-            let archive = NSKeyedArchiver.archivedData(withRootObject: PlayerControll.sharedHQ.oldAnswers)
-            PlayerControll.sharedHQ.defaults.set(archive, forKey: "Ans")
+            PlayerControll.sharedHQ.AddAns(ans: PlayerControll.sharedHQ.Keywords[PlayerControll.sharedHQ.insNUM])
             PlayerControll.sharedHQ.defaults.synchronize()
             //初期化する
             PlayerControll.sharedHQ.destroy()

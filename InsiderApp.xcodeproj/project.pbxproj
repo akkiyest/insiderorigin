@@ -13,9 +13,6 @@
 		F84769001DBCA6B00088251C /* checkAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84768FF1DBCA6B00088251C /* checkAnswerViewController.swift */; };
 		F84769021DBCB6110088251C /* timeKeepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84769011DBCB6110088251C /* timeKeepViewController.swift */; };
 		F84769041DBF40240088251C /* playerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84769031DBF40240088251C /* playerListViewController.swift */; };
-		F868B38D1DC0C22D002E47BC /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F868B38C1DC0C22D002E47BC /* KeyboardViewController.swift */; };
-		F868B3911DC0C22D002E47BC /* KeyboardHIRA.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F868B38A1DC0C22D002E47BC /* KeyboardHIRA.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F868B3961DC0C2FE002E47BC /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = F868B3951DC0C2FE002E47BC /* View.xib */; };
 		F89455DF1DA90338004F6D29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89455DE1DA90338004F6D29 /* AppDelegate.swift */; };
 		F89455E11DA90338004F6D29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89455E01DA90338004F6D29 /* ViewController.swift */; };
 		F89455E41DA90338004F6D29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F89455E21DA90338004F6D29 /* Main.storyboard */; };
@@ -30,16 +27,6 @@
 		F8F4684F1DB8B003006D3EB6 /* rule5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F4684E1DB8B003006D3EB6 /* rule5ViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F868B38F1DC0C22D002E47BC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F89455D31DA90338004F6D29 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F868B3891DC0C22D002E47BC;
-			remoteInfo = KeyboardHIRA;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		F868B3851DC0C1F2002E47BC /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -47,7 +34,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				F868B3911DC0C22D002E47BC /* KeyboardHIRA.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,17 +41,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4A4A650A449119B596C6AED2 /* Pods-InsiderApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InsiderApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InsiderApp/Pods-InsiderApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F8287B611DB6611400582291 /* PlayerControll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerControll.swift; path = ../PlayerControll.swift; sourceTree = "<group>"; };
 		F830CF151DB4ED35002317FF /* settingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingViewController.swift; sourceTree = "<group>"; };
 		F84768FD1DBB7F7C0088251C /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		F84768FF1DBCA6B00088251C /* checkAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkAnswerViewController.swift; sourceTree = "<group>"; };
 		F84769011DBCB6110088251C /* timeKeepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = timeKeepViewController.swift; sourceTree = "<group>"; };
 		F84769031DBF40240088251C /* playerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playerListViewController.swift; sourceTree = "<group>"; };
-		F868B38A1DC0C22D002E47BC /* KeyboardHIRA.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = KeyboardHIRA.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		F868B38C1DC0C22D002E47BC /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
-		F868B38E1DC0C22D002E47BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F868B3951DC0C2FE002E47BC /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		F89455DB1DA90338004F6D29 /* InsiderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InsiderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F89455DE1DA90338004F6D29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F89455E01DA90338004F6D29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,17 +61,9 @@
 		F8F4684A1DB8AFF1006D3EB6 /* rule3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rule3ViewController.swift; sourceTree = "<group>"; };
 		F8F4684C1DB8AFFB006D3EB6 /* rule4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rule4ViewController.swift; sourceTree = "<group>"; };
 		F8F4684E1DB8B003006D3EB6 /* rule5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rule5ViewController.swift; sourceTree = "<group>"; };
-		F93B230034369BD8F7CAC0C9 /* Pods-InsiderApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InsiderApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-InsiderApp/Pods-InsiderApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F868B3871DC0C22D002E47BC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F89455D81DA90338004F6D29 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -108,32 +81,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F4EE391B28B5C3924CDDB1FB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4A4A650A449119B596C6AED2 /* Pods-InsiderApp.debug.xcconfig */,
-				F93B230034369BD8F7CAC0C9 /* Pods-InsiderApp.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		F868B38B1DC0C22D002E47BC /* KeyboardHIRA */ = {
-			isa = PBXGroup;
-			children = (
-				F868B38C1DC0C22D002E47BC /* KeyboardViewController.swift */,
-				F868B38E1DC0C22D002E47BC /* Info.plist */,
-				F868B3951DC0C2FE002E47BC /* View.xib */,
-			);
-			path = KeyboardHIRA;
-			sourceTree = "<group>";
-		};
 		F89455D21DA90338004F6D29 = {
 			isa = PBXGroup;
 			children = (
 				F89455DD1DA90338004F6D29 /* InsiderApp */,
-				F868B38B1DC0C22D002E47BC /* KeyboardHIRA */,
 				F89455DC1DA90338004F6D29 /* Products */,
-				F4EE391B28B5C3924CDDB1FB /* Pods */,
 				CE8E23D9C6DC192A77FD0B12 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -142,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				F89455DB1DA90338004F6D29 /* InsiderApp.app */,
-				F868B38A1DC0C22D002E47BC /* KeyboardHIRA.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,23 +127,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F868B3891DC0C22D002E47BC /* KeyboardHIRA */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F868B3921DC0C22D002E47BC /* Build configuration list for PBXNativeTarget "KeyboardHIRA" */;
-			buildPhases = (
-				F868B3861DC0C22D002E47BC /* Sources */,
-				F868B3871DC0C22D002E47BC /* Frameworks */,
-				F868B3881DC0C22D002E47BC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = KeyboardHIRA;
-			productName = KeyboardHIRA;
-			productReference = F868B38A1DC0C22D002E47BC /* KeyboardHIRA.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		F89455DA1DA90338004F6D29 /* InsiderApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F89455ED1DA90338004F6D29 /* Build configuration list for PBXNativeTarget "InsiderApp" */;
@@ -205,7 +139,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				F868B3901DC0C22D002E47BC /* PBXTargetDependency */,
 			);
 			name = InsiderApp;
 			productName = InsiderApp;
@@ -222,10 +155,6 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = akihiro.itoh;
 				TargetAttributes = {
-					F868B3891DC0C22D002E47BC = {
-						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
-					};
 					F89455DA1DA90338004F6D29 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = TWVPKMPB47;
@@ -247,20 +176,11 @@
 			projectRoot = "";
 			targets = (
 				F89455DA1DA90338004F6D29 /* InsiderApp */,
-				F868B3891DC0C22D002E47BC /* KeyboardHIRA */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F868B3881DC0C22D002E47BC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F868B3961DC0C2FE002E47BC /* View.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F89455D91DA90338004F6D29 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,14 +193,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F868B3861DC0C22D002E47BC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F868B38D1DC0C22D002E47BC /* KeyboardViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F89455D71DA90338004F6D29 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,14 +218,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		F868B3901DC0C22D002E47BC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F868B3891DC0C22D002E47BC /* KeyboardHIRA */;
-			targetProxy = F868B38F1DC0C22D002E47BC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		F89455E21DA90338004F6D29 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -326,37 +230,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F868B3931DC0C22D002E47BC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				INFOPLIST_FILE = KeyboardHIRA/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.akihiro.itoh.InsiderApp.KeyboardHIRA;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		F868B3941DC0C22D002E47BC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				INFOPLIST_FILE = KeyboardHIRA/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.akihiro.itoh.InsiderApp.KeyboardHIRA;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
 		F89455EB1DA90338004F6D29 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -447,9 +320,7 @@
 		};
 		F89455EE1DA90338004F6D29 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A4A650A449119B596C6AED2 /* Pods-InsiderApp.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InsiderApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -463,9 +334,7 @@
 		};
 		F89455EF1DA90338004F6D29 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F93B230034369BD8F7CAC0C9 /* Pods-InsiderApp.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InsiderApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -480,15 +349,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F868B3921DC0C22D002E47BC /* Build configuration list for PBXNativeTarget "KeyboardHIRA" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F868B3931DC0C22D002E47BC /* Debug */,
-				F868B3941DC0C22D002E47BC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		F89455D61DA90338004F6D29 /* Build configuration list for PBXProject "InsiderApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

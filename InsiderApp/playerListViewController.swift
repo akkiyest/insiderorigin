@@ -126,7 +126,7 @@ class playerListViewController: UIViewController {
     }
     
     func TNTmode(){
-        let messages: UIAlertController? = UIAlertController(title:"正解者に端末を渡してください", message: "正解者は一人だけ正体を確認することができます。/nその内容を話しても構いません。/nゲームを左右するので、注意深く選んでください。",preferredStyle:UIAlertControllerStyle.alert)
+        let messages: UIAlertController? = UIAlertController(title:"正解者に端末を渡してください", message: "正解者は一人だけ正体を確認することができます。\nその内容を話しても構いません。\nゲームを左右するので、注意深く選んでください。",preferredStyle:UIAlertControllerStyle.alert)
         let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in

@@ -55,17 +55,7 @@ final class PlayerControll: UIResponder, UIApplicationDelegate {
         } else if gisinmode == 1{
             
             self.Names.append("インサイダーは居ない")
-
-            
-            if defaults.bool(forKey: "firstLaunch") {
-                
-                // Some Process will be here
-                oldAnswers.append("usagi")
-                // off the flag to know if it is first time to launch
-                defaults.set(false, forKey: "firstLaunch")
-            }
-            oldAnswers.append("usagi")
-            Randomize()
+            oldAnswers = Randomize()
             shuffleBang(array: &oldAnswers)
             self.Keywords.append(oldAnswers[0])
         }
@@ -138,9 +128,14 @@ final class PlayerControll: UIResponder, UIApplicationDelegate {
         seikaisha = 999
     }
     
-    func Randomize(){
-        let data = PlayerControll.sharedHQ.defaults.object(forKey: "Ans") as! NSData
-        oldAnswers = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [String?]
+    func Randomize() -> [String?]{
+        
+        return oldAnswers 
+    }
+    
+    func AddAns(ans:String?){
+        oldAnswers.append(ans)
+        defaults.set(oldAnswers, forKey: "Ans")
         print(oldAnswers)
     }
     
