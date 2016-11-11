@@ -129,14 +129,20 @@ final class PlayerControll: UIResponder, UIApplicationDelegate {
     }
     
     func Randomize() -> [String?]{
-        
+        //if defaults.object(forKey: "Ans") == nil{
+            oldAnswers = ["usagi","banana","ringo","kuruma","nihon","aichiken","toumorokoshi","ongaku","tabako","mizu","keshigomu","umi","yama","kaisha","itigo","piza","aisukurimu","meron","inu","unagi","onara","kankoku","kuuki","kosumosu","tanbo"]
+        //} else {
+        //}
         return oldAnswers 
     }
     
     func AddAns(ans:String?){
-        oldAnswers.append(ans)
-        defaults.set(oldAnswers, forKey: "Ans")
-        print(oldAnswers)
+        self.oldAnswers.append(ans)
+        print(self.oldAnswers)
+        //未実装
+        //let archive = NSKeyedArchiver.archivedData(withRootObject: self.oldAnswers)
+        //self.defaults.set(archive, forKey: "Ans")
+        //self.defaults.synchronize()
     }
     
     static var sharedHQ = PlayerControll()

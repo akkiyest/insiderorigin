@@ -100,6 +100,7 @@ class playerListViewController: UIViewController {
         let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in
+            self.named()
             PlayerControll.sharedHQ.seikaisha = self.selected
             //画面を移転する
             self.selected = 999
@@ -109,10 +110,12 @@ class playerListViewController: UIViewController {
                 self.present(targetViewController!, animated: true, completion: nil)
             }else if PlayerControll.sharedHQ.detecmode == 1 {
                 //探偵モードをONにする
+                self.named()
                 self.image.image = #imageLiteral(resourceName: "detective")
                 self.TNT = PlayerControll.sharedHQ.detecskill
                 self.TNTmode()
             } else {
+                self.named()
                 self.kyoshutouhyou()
             }
         })

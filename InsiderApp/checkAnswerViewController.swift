@@ -104,7 +104,7 @@ class checkAnswerViewController: UIViewController {
         if PlayerControll.sharedHQ.spymode == 1{
             diceReroll()
             PlayerControll.sharedHQ.spyNUM = self.INSnum
-            msg = "また、正解すると勝利を独占するスパイがいます。/nそれは"+PlayerControll.sharedHQ.PASSCODEs[PlayerControll.sharedHQ.insNUM]+"番の人です。"
+            msg = "\nまた、正解すると勝利を独占するスパイがいます。\nそれは"+PlayerControll.sharedHQ.PASSCODEs[PlayerControll.sharedHQ.insNUM]+"番の人です。"
         }
         let messages: UIAlertController? = UIAlertController(title:"読み上げてください。", message: "インサイダーは\nパスコード"+PlayerControll.sharedHQ.PASSCODEs[PlayerControll.sharedHQ.insNUM]+"番の人です。"+msg,preferredStyle:UIAlertControllerStyle.alert)
         let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{

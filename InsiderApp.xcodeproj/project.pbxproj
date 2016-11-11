@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F814DAD31DD4CF33004C81C5 /* creditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F814DAD21DD4CF33004C81C5 /* creditViewController.swift */; };
+		F814DAD51DD4D0C3004C81C5 /* spyRuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F814DAD41DD4D0C3004C81C5 /* spyRuleViewController.swift */; };
 		F8287B621DB6611400582291 /* PlayerControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8287B611DB6611400582291 /* PlayerControll.swift */; };
 		F830CF161DB4ED35002317FF /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F830CF151DB4ED35002317FF /* settingViewController.swift */; };
 		F84768FE1DBB7F7C0088251C /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84768FD1DBB7F7C0088251C /* InputViewController.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F814DAD21DD4CF33004C81C5 /* creditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = creditViewController.swift; path = ../creditViewController.swift; sourceTree = "<group>"; };
+		F814DAD41DD4D0C3004C81C5 /* spyRuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = spyRuleViewController.swift; sourceTree = "<group>"; };
 		F8287B611DB6611400582291 /* PlayerControll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerControll.swift; path = ../PlayerControll.swift; sourceTree = "<group>"; };
 		F830CF151DB4ED35002317FF /* settingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingViewController.swift; sourceTree = "<group>"; };
 		F84768FD1DBB7F7C0088251C /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 		F89455DD1DA90338004F6D29 /* InsiderApp */ = {
 			isa = PBXGroup;
 			children = (
+				F814DAD41DD4D0C3004C81C5 /* spyRuleViewController.swift */,
+				F814DAD21DD4CF33004C81C5 /* creditViewController.swift */,
 				F84768FF1DBCA6B00088251C /* checkAnswerViewController.swift */,
 				F8F468461DB8AF6B006D3EB6 /* rule1ViewController.swift */,
 				F8F4684A1DB8AFF1006D3EB6 /* rule3ViewController.swift */,
@@ -202,10 +208,12 @@
 				F8F468411DB8A0D9006D3EB6 /* rulePageViewController.swift in Sources */,
 				F8C863341DC3B73C003C2BA0 /* ResultViewController.swift in Sources */,
 				F84768FE1DBB7F7C0088251C /* InputViewController.swift in Sources */,
+				F814DAD51DD4D0C3004C81C5 /* spyRuleViewController.swift in Sources */,
 				F8287B621DB6611400582291 /* PlayerControll.swift in Sources */,
 				F8F468451DB8A42C006D3EB6 /* rule0ViewController.swift in Sources */,
 				F84769021DBCB6110088251C /* timeKeepViewController.swift in Sources */,
 				F8F4684B1DB8AFF1006D3EB6 /* rule3ViewController.swift in Sources */,
+				F814DAD31DD4CF33004C81C5 /* creditViewController.swift in Sources */,
 				F8F468471DB8AF6B006D3EB6 /* rule1ViewController.swift in Sources */,
 				F84769041DBF40240088251C /* playerListViewController.swift in Sources */,
 				F8F468491DB8AF7D006D3EB6 /* rule2ViewController.swift in Sources */,
