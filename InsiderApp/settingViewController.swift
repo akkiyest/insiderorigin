@@ -101,6 +101,13 @@ class settingViewController: UIViewController {
             
             alert2.addAction(defaultAction)
             present(alert2, animated: true, completion: nil)
+        }else if sendPLN! < 5 && advancedswitch.isOn == false && spymodeswitch.isOn {
+            let alert2: UIAlertController = UIAlertController(title: "設定エラー", message: "スパイモードは6人以上で、\nアドバンスドモードONで\n利用してください",preferredStyle: UIAlertControllerStyle.alert)
+            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
+                (action: UIAlertAction!) -> Void in print("OK")})
+            
+            alert2.addAction(defaultAction)
+            present(alert2, animated: true, completion: nil)
         }
         
         //確認メッセージを表示するため
